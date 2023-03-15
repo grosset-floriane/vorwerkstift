@@ -1,0 +1,10 @@
+$font-path: "assets/fonts/lack/" !default;
+
+@font-face {
+  font-family: 'lackregular';
+  src: url('#{$font-path}/Lack-Regular.woff2') format('woff2');
+      //  url('../../assets/fonts/lack/lack-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

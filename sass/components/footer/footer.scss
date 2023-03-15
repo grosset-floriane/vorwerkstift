@@ -1,0 +1,9 @@
+.footer {
+    &-address {
+        display: flex;
+        flex-direction: column;
+        @include Desktop {
+            
+        } 
+    }
+}

@@ -139,6 +139,7 @@ add_action( 'widgets_init', 'vorwerkstift_widgets_init' );
  */
 function vorwerkstift_scripts() {
 	wp_enqueue_style( 'vorwerkstift-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'vorwerkstift-style-main', get_template_directory_uri() . '/main.css' , array(), _S_VERSION );
 	wp_style_add_data( 'vorwerkstift-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'vorwerkstift-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
