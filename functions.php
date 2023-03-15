@@ -49,7 +49,12 @@ function vorwerkstift_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'vorwerkstift' ),
+			'primary-menu' => esc_html__( 'Primary', 'vorwerkstift' ),
+			'the-house-menu' => esc_html__( 'The house', 'vorwerkstift' ),
+			'galerie21-menu' => esc_html__( 'Galerie21', 'vorwerkstift' ),
+			'application-menu' => esc_html__( 'Application', 'vorwerkstift' ),
+			'contact-menu' => esc_html__( 'Contact', 'vorwerkstift' ),
+			'footer-menu' => esc_html__( 'Footer', 'vorwerkstift' ),
 		)
 	);
 
