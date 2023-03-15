@@ -20,6 +20,24 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
+	
+		
+			$terms = get_the_terms(get_the_ID(), 'section');
+	
+			if (! empty( $terms ) ) {
+				foreach($terms as $term) {
+					$menuID = $term->slug . '-menu';
+				}
+
+				if($menuID) {
+					wp_nav_menu(
+						array(
+							'theme_location' => $menuID,
+							'menu_id'        => $menuID,
+						)
+					);
+				}
+			}
 
 			get_template_part( 'template-parts/content', 'page' );
 
