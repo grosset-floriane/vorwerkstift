@@ -1,28 +1,34 @@
 # Theme for Vorwerkstift Artist house in Hamburg
 
 ## Introduction
+
 Made from the underscore theme. The theme is designed and developed by Georgios Plastok and Floriane Grosset
 
 ## Required
 
-### Server side 
+### Server side
+
 Laragon
 
 ### Package manager
+
 Node
 Composer
 
 ### How to run Sass
 
 Watch mode: any changes to a scss file will compile the main.css file
+
 ```cmd
 npm run watch
 ```
 
 ### Plugins for VS code
+
 #### Simple Auto Reload
 
 Enables to reload automatically the page in chrome browser
+
 ##### Installation (Windows)
 
 1. Right click on Chrome icon
@@ -38,7 +44,40 @@ Enables to reload automatically the page in chrome browser
 2. Select Auto-reload: Select tab
 3. Select Browser tab to reload
 
+### Useful GIT commands
+
+```cmd
+git pull
+```
+
+retrieve latest changes
+
+```cmd
+git checkout -b <feature/xxxx.xxx>
+```
+
+create a new branch and checkout to it
+
+```cmd
+git stage
+```
+
+```cmd
+git commit -m '<custom message>'
+```
+
+```cmd
+git push
+```
+
+sent to remote the commited work
+
+```cmd
+git checkout <oldname>
+git branch -m <newname>
+```
 
 ## To do:
+
 - linter on save?
 - beautifier ?
