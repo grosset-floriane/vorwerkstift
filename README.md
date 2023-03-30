@@ -72,6 +72,11 @@ git push
 
 sent to remote the commited work
 
+```cmd
+git checkout <oldname>
+git branch -m <newname>
+```
+
 ## To do:
 
 - linter on save?
