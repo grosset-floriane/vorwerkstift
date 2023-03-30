@@ -44,6 +44,33 @@ Enables to reload automatically the page in chrome browser
 2. Select Auto-reload: Select tab
 3. Select Browser tab to reload
 
+### Useful GIT commands
+
+```cmd
+git pull
+```
+
+retrieve latest changes
+
+```cmd
+git checkout -b <feature/xxxx.xxx>
+```
+
+create a new branch and checkout to it
+
+```cmd
+git stage
+```
+
+```cmd
+git commit -m '<custom message>'
+```
+
+```cmd
+git push
+```
+
+sent to remote the commited work
 
 ## To do:
 
