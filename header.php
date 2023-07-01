@@ -34,3 +34,7 @@
 		<?php include 'components/mobile-nav/mobile-nav.php'; ?>
 
 	</header><!-- #masthead -->
+
+<!-- Main navigation -->
+	<?php include 'components/desktop-nav/desktop-nav.php'; ?>
+
