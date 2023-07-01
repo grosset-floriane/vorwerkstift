@@ -1,0 +1,55 @@
+.site-header {
+  top: 0;
+  left: 0;
+  background-color: $color-purple-main;
+  position: fixed;
+  padding: $spacing * 2;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 999;
+
+  &.toggled {
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+
+
+  
+ 
+
+  .site-branding {
+    
+
+
+    & > p {
+      margin: 0;
+    }
+  }
+
+  .site-title a {
+    color: $color-green-main;
+    font-size: 2rem;
+    font-family: $font-headings;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1;
+
+
+    /* Whole header clickable */
+    span {
+      display: none;
+
+    }
+  }
+
+  .site-description {
+    color: $color-white-light;
+    font-family: $font-headings;
+    font-size: 1.4rem;
+    line-height: 1;
+
+  }
+}

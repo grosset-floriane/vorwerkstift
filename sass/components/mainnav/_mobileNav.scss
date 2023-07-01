@@ -1,0 +1,130 @@
+.mobile-navigation {
+  width: 100%;
+  display: none;
+  margin-top: $spacing;
+  height: calc(100vh - 7rem);
+  overflow-y: auto;
+
+
+  @include tablet {
+    display: none;
+  }
+
+  &.toggled {
+    display: block;
+
+  }
+ 
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: $font-headings;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: $font-headings;
+
+    &[aria-current='page'] {
+      background-color: $color-green-main;
+      color: $color-purple-main;
+    }
+
+    &:focus-visible {
+      outline: $outline-green;
+    }
+  }
+
+  & > div > ul > li {
+    background-color: $color-white-light;
+    
+    width: 100%;
+    
+    display: block;
+    margin-top: $spacing * 2;
+    font-size: 2.4rem;
+
+    a {
+      color: $color-black-dark;
+      text-align: center;
+      display: block;
+      padding: $spacing * 2;
+
+     
+    }
+  }
+
+  /* Category titles */
+  // When the current page is part of the section
+  .menu-item-has-children:not(:first-child).active-child {
+    background-color: $color-green-main;
+    > a::after {
+      background-image: url('/wp-content/themes/vorwerkstift/assets/images/arrow-top-purple.svg');
+    } 
+
+    a {
+      color: $color-purple-main;
+
+      &[aria-current='page'] {
+        color: $color-black-dark;
+        background-color: $color-white-light;
+      }
+    }
+  }
+
+  .menu-item-has-children:not(:first-child) {
+    > a {
+      position: relative;
+
+      &.focus {
+        ~ ul  {
+          display: block;
+        }
+      }
+  
+      /* Arrow */
+      &::after {
+        content: ' ';
+        background: url('/wp-content/themes/vorwerkstift/assets/images/arrow-top-black.svg') center center;
+        width: 4.8rem;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: $spacing / 2;
+        transform-origin: center;
+        transform: rotate(180deg);
+        transition: ease-in transform 300ms;
+      }
+
+      &.focus::after {
+          transform: rotate(0deg);
+      }
+    }
+
+    
+    > ul {
+      display: none;
+      padding: .8rem 1.6rem 1.6rem;
+
+      a:not([lang]) {
+        font-size: 1.4rem;
+        border-radius: $spacing * 2;
+        padding: $spacing / 2;
+        margin-bottom: $spacing * 1.5;
+        text-transform: uppercase;
+
+        &[caria-current="page"] {
+          background-color: $color-white-light;
+        }
+      }
+
+      li:last-child a {
+         
+          margin-bottom: 0;
+        
+      }
+    }
+  }
+}

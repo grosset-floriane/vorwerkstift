@@ -4,6 +4,10 @@
     font-size: 62.5%;
 }
 
+* {
+    line-height: 1.6;
+}
+
 
 html,
 body {
@@ -13,10 +17,11 @@ color: black;
 background-color: transparent;
 font-family: $font-body;
 // line below might hinder sticky positions
-overflow-x: hidden;
+background-color: $color-grey-light;
 box-sizing: border-box;
 scroll-behavior: smooth;
 font-size: $font-size-base;
+line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,4 +30,16 @@ h1, h2, h3, h4, h5, h6 {
 
 a, button {
     touch-action: manipulation;
+    &:focus-visible {
+        outline: $outline-purple;
+        outline-offset: -$spacing / 2;
+    }
+}
+
+a {
+    font-family: $font-body;
+}
+
+button {
+    font-family: $font-headings;
 }

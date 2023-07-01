@@ -1,0 +1,41 @@
+.main-navigation, .mobile-navigation {
+  > div > ul > li:first-child {
+    padding: 0;
+    background-color: transparent;
+
+
+    & > a {
+      display: none;
+    } 
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      position: static;
+      z-index: auto;
+      box-shadow: none;
+      float: none;
+      gap: $spacing * 2;
+
+
+      li.lang-item {
+        a {
+          writing-mode: horizontal-tb;
+         font-size: 1.4rem;
+          padding: $spacing * 2;
+          width: 4.4rem;
+          height: 4.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $color-white-light;
+
+      }
+
+      li.current-lang a {
+        background-color: $color-green-main;
+        color: $color-purple-main;
+      }
+    }
+  }
+}

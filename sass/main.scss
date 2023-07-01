@@ -23,12 +23,18 @@ with others.
 // Helpers
 @import 'helpers/fonts';
 @import 'helpers/parameters';
+@import 'helpers/layoutMixins';
 @import 'helpers/resets';
 // Layout
 
 
 // Components
-    // Nav
+    // Header
+    @import 'components/header/header';
+    @import 'components/mainnav/mobileNav';
+    @import 'components/mainnav/languageNav';
+    @import 'components/mainnav/menuToggle';
+
     //  Textual
     //  Templates 
     // Scrollbars
