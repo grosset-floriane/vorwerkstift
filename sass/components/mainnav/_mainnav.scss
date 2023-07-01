@@ -45,10 +45,18 @@
       text-decoration: none;
       text-align: center;
       font-family: $font-headings;
+
+      &:hover {
+        background-color: $color-yellow-light;
+      }
   
       &[aria-current='page'] {
         background-color: $color-green-main;
         color: $color-purple-main;
+
+        &:hover {
+          background-color: $color-green-light;
+        }
       }
     }
     

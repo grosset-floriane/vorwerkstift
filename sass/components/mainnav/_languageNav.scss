@@ -47,6 +47,10 @@
           justify-content: center;
           background-color: $color-white-light;
 
+          &:hover {
+            background-color: $color-yellow-light;
+          }
+
           @include tablet {
             padding: 0;
             font-size: 1rem;
@@ -71,6 +75,10 @@
       li.current-lang a {
         background-color: $color-green-main;
         color: $color-purple-main;
+
+        &:hover {
+          background-color: $color-green-light;
+        }
       }
     }
   }
