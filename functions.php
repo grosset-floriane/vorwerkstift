@@ -50,6 +50,7 @@ function vorwerkstift_setup() {
 	register_nav_menus(
 		array(
 			'primary-menu' => esc_html__( 'Primary', 'vorwerkstift' ),
+			'mobile-menu' => esc_html__('Mobile', 'vorwerkstift'),
 			'the-house-menu' => esc_html__( 'The house', 'vorwerkstift' ),
 			'galerie21-menu' => esc_html__( 'Galerie21', 'vorwerkstift' ),
 			'application-menu' => esc_html__( 'Application', 'vorwerkstift' ),
