@@ -124,12 +124,18 @@
     link.addEventListener("touchstart", toggleFocus, false)
     link.addEventListener("keypress", toggleFocus, false)
     link.setAttribute("role", "button")
+    link.setAttribute("aria-haspopup", "true")
+    link.setAttribute("aria-expanded", "false")
+    const subMenuTitle = link.innerHTML
+    link.setAttribute("aria-label", `open ${subMenuTitle} submenu`)
+    const subMenuSlug = `submenu-${subMenuTitle.toLowerCase().replace(/\s/g, '-')}`
+    link.parentNode.querySelector("ul").setAttribute("id", subMenuSlug)
+    link.setAttribute("aria-controls", subMenuSlug)
 
   }
 
-  /**
-   * Sets or removes .focus class on an element.
-   */
+  // Sets or removes .focus class on an element.
+
   function toggleFocus(event) {
     if (
       event.type === "keypress" &&
@@ -161,9 +167,16 @@
           link.querySelectorAll("a")[0].innerHTML !== "."
         ) {
           link.querySelectorAll("a")[0].classList.remove("focus")
+          link.querySelectorAll("a")[0].setAttribute("aria-expanded", "false")
+
         }
       }
       innerLink.classList.toggle("focus")
+      if (innerLink.classList.contains("focus")) {
+        innerLink.setAttribute("aria-expanded", "true")
+      } else {
+        innerLink.setAttribute("aria-expanded", "false")
+      }
     }
   }
 })()
