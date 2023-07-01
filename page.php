@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-
+<div class="scrollable">
 	<main id="primary" class="site-main">
 
 		<?php
@@ -54,3 +54,5 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
+</div>
