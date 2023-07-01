@@ -9,3 +9,31 @@
       @content;
   }
 }
+
+@mixin desktop {
+  @media (min-width: 880px) and (min-height: 500px) {
+      @content;
+  }
+}
+
+
+
+@mixin largedesktop {
+  @media (min-width: 1400px) {
+      @content;
+  }
+}
+
+
+// Media queries for main nav according to height of big screens
+@mixin mediumLargeHeight {
+  @media (min-height: 1200px) {
+      @content;
+  }
+}
+
+@mixin largeHeight {
+  @media (min-height: 1440px) {
+      @content;
+  }
+}

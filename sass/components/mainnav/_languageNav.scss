@@ -3,6 +3,18 @@
     padding: 0;
     background-color: transparent;
 
+    @include tablet {
+      max-height: 4.4rem;
+      max-width: 4.9rem;
+    } 
+
+    @include mediumLargeHeight {
+      max-width: 7rem;
+    }
+
+    @include largeHeight {
+      max-width: 9rem;
+    }
 
     & > a {
       display: none;
@@ -17,6 +29,11 @@
       float: none;
       gap: $spacing * 2;
 
+      @include tablet {
+        gap: 0;
+        justify-content: stretch;
+        width: 100%;
+      }
 
       li.lang-item {
         a {
@@ -30,6 +47,25 @@
           justify-content: center;
           background-color: $color-white-light;
 
+          @include tablet {
+            padding: 0;
+            font-size: 1rem;
+            width: auto;
+            height: 4.4rem;
+          }
+
+          @include mediumLargeHeight {
+            font-size: 1.4rem;
+          }
+
+          @include largeHeight {
+            font-size: 1.6rem;
+          }
+        }
+
+        @include tablet {
+          flex-grow: 1;
+        }
       }
 
       li.current-lang a {

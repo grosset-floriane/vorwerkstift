@@ -1,6 +1,57 @@
 .main-navigation {
   display: none;
+  @include tablet {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-left: $border-purple;
+    font-size: 1.8rem;
+    font-family: $font-headings;
+    background-color: #FFFFFF;
+    width: fit-content;
+    max-width: $width-desktop-main-nav;
 
+    @include mediumLargeHeight {
+      font-size: 3.2rem;
+      max-width: 7rem;
+    }
 
+    @include largeHeight {
+      font-size: 4rem;
+      max-width: 9rem;
+    }
+  
+  
+    .menu {
+      justify-content: stretch;
+      flex-direction: column;
+      height: 100vh;
+      max-height: 100vh;
+      flex-wrap: wrap;
+      display: flex;
+  
+      > li {
+        flex-grow: 1;
+        display: flex;
+  
+      }
+    }
+  
+    a {
+      padding: 0 $spacing;
+      writing-mode: vertical-rl;
+      color: $color-black-dark;
+      text-decoration: none;
+      text-align: center;
+      font-family: $font-headings;
+  
+      &[aria-current='page'] {
+        background-color: $color-green-main;
+        color: $color-purple-main;
+      }
+    }
+    
+  }
 
 }

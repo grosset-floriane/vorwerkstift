@@ -9,6 +9,10 @@ $color-grey-light: #C0C0C0;
 $spacing: 0.8rem;
 
 // Borders
+$border-width: $spacing / 2;
+$outline-green: .2rem solid $color-green-main;
+$outline-purple: $border-width solid $color-purple-main;
+$border-purple: $border-width solid $color-purple-main;
 
 // Font Family
 $font-body: 'Open sans', sans-serif;
@@ -19,7 +23,6 @@ $font-headings: 'lackregular', serif;
 $font-size-base: 1.6rem;
 
 // regular heights
-
-// // regular heights
-// $height-mobile-nav: 7.3rem;
-// $height-tablet-nav: 9.5rem;
+$width-desktop-main-nav: 4.9rem;	
+$width-medium-desktop-main-nav: 7rem;
+$width-large-desktop-main-nav: 9rem;
