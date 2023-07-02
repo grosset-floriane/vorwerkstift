@@ -1,0 +1,13 @@
+.section-title {
+    font-size: 3.2rem;
+    font-family: $font-headings;
+    color: $color-purple-main;
+    margin: 0;
+    text-align: center;
+
+    @include tablet {
+        font-size: 6.4rem;
+        text-align: left;
+        line-height: 0.7;
+    }
+}

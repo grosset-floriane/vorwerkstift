@@ -1,40 +1,32 @@
-// // Colors
-// $color-grey: #878787;
+// Colors
+$color-purple-main: #4B107A;
+$color-purple-light: #6b22a6;
+$color-black-dark: #1C1C1C;
+$color-white-light: #FFFFFF;
+$color-green-main:  #8AD077;
+$color-grey-light: #C0C0C0;
+$color-green-light: #AFED9E;
+$color-yellow-light: #F0F0D2;
 
-// // Borders
-// $border-thin: 1px black solid;
+// Spacing
+$spacing: 0.8rem;
 
-// // Font Family
-$font-body: 'Open sans';
+// Borders
+$border-width: $spacing / 2;
+$outline-green: .4rem solid $color-green-main;
+$outline-purple: $border-width solid $color-purple-main;
+$border-purple: $border-width solid $color-purple-main;
+
+// Font Family
+$font-body: 'Open sans', sans-serif;
 $font-headings: 'lackregular', serif;
 
-// $font-weight-light: 400;
-// $font-weight-bold: 700;
+// Font Size
 
-// // Font Size
-// $font-size-biggest: 2.8rem;
-// $font-size-largest: 2.3rem;
-// $font-size-large: 1.9rem;
 $font-size-base: 1.6rem;
-// $font-size-small: 1.3rem;
-// $font-size-smallest: 1rem;
 
-// // Spacing
-// $spacing-small: .75rem;
-// $spacing-single: 1rem;
-// $spacing-double: 2rem;
-// $spacing-triple: 3rem;
-// $spacing-big: 6rem;
-
-// $spacing-mobile: 1.6rem;
-// $spacing-tablet: 2.5rem;
-
-
-// // Media queries
-// $desktop: 800px;
-// $tablet: 600px;
-
-
-// // regular heights
-// $height-mobile-nav: 7.3rem;
-// $height-tablet-nav: 9.5rem;
+// regular mesurements
+$height-mobile-header: 7rem;
+$width-desktop-main-nav: 4.9rem;	
+$width-medium-desktop-main-nav: 7rem;
+$width-large-desktop-main-nav: 9rem;

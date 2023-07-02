@@ -14,8 +14,9 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
+<div class="scrollable">
+<main id="primary" class="site-main">
+	<header>
 
 		<?php
 		while ( have_posts() ) :
@@ -23,19 +24,33 @@ get_header();
 	
 		
 			$terms = get_the_terms(get_the_ID(), 'section');
+
+			$activeLang = pll_current_language();
 	
 			if (! empty( $terms ) ) {
 				foreach($terms as $term) {
 					$menuID = $term->slug . '-menu';
+					$sectionTitle = $term->name;
+					if($activeLang === 'de') {
+						$sectionTitle = $term->description;
+					}
+						
 				}
 
 				if($menuID) {
+					?>
+					<p class="section-title"><?php echo $sectionTitle; ?></p>
+					<nav class="sub-navigation">
+					<?php
 					wp_nav_menu(
 						array(
 							'theme_location' => $menuID,
 							'menu_id'        => $menuID,
 						)
 					);
+					?>
+					</nav>
+					<?php
 				}
 			}
 
@@ -48,9 +63,13 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+		</header>
 
 	</main><!-- #main -->
 
 <?php
 get_sidebar();
 get_footer();
+
+?>
+</div>
