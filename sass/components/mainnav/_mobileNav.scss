@@ -115,15 +115,13 @@
         margin-bottom: $spacing * 1.5;
         text-transform: uppercase;
 
-        &[caria-current="page"] {
+        &[aria-current="page"] {
           background-color: $color-white-light;
         }
       }
 
       li:last-child a {
-         
           margin-bottom: 0;
-        
       }
     }
   }

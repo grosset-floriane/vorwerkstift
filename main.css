@@ -404,7 +404,7 @@ button {
 	text-transform: uppercase;
 }
 
-.mobile-navigation .menu-item-has-children:not(:first-child) > ul a:not([lang])[caria-current="page"] {
+.mobile-navigation .menu-item-has-children:not(:first-child) > ul a:not([lang])[aria-current="page"] {
 	background-color: #FFFFFF;
 }
 
