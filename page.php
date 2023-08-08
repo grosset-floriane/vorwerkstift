@@ -22,7 +22,12 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 	
-		
+			/* Check which section the page belongs to display the  
+			** corresponding title in the current language and 
+			** subnavigation.
+			*/
+
+			// get all the section categories
 			$terms = get_the_terms(get_the_ID(), 'section');
 
 			$activeLang = pll_current_language();
@@ -39,17 +44,17 @@ get_header();
 
 				if($menuID) {
 					?>
-					<p class="section-title"><?php echo $sectionTitle; ?></p>
-					<nav class="sub-navigation">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => $menuID,
-							'menu_id'        => $menuID,
-						)
-					);
-					?>
-					</nav>
+						<p class="section-title"><?php echo $sectionTitle; ?></p>
+						<nav class="sub-navigation">
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => $menuID,
+										'menu_id'        => $menuID,
+									)
+								);
+							?>
+						</nav>
 					<?php
 				}
 			}
