@@ -8,7 +8,7 @@
     border-left: $border-purple;
     font-size: 1.8rem;
     font-family: $font-headings;
-    background-color: #FFFFFF;
+    background-color: $color-white-light;
     width: fit-content;
     max-width: $width-desktop-main-nav;
 
@@ -21,7 +21,6 @@
       font-size: 4rem;
       max-width: 9rem;
     }
-  
   
     .menu {
       justify-content: stretch;
