@@ -57,7 +57,7 @@ a, button {
 }
 
 a:focus-visible, button:focus-visible {
-	outline: 0.4rem solid #4B107A;
+	outline: 0.4rem solid #5B9547;
 	outline-offset: -0.4rem;
 }
 
@@ -147,7 +147,7 @@ button {
 		max-width: 47.7rem;
 	}
 	.site-header:hover {
-		background-color: #6b22a6;
+		background-color: #6B22A6;
 	}
 }
 
@@ -167,7 +167,7 @@ button {
 }
 
 .site-header .site-title a {
-	color: #8AD077;
+	color: #51D52D;
 	font-size: 2rem;
 	font-family: "lackregular", serif;
 	text-decoration: none;
@@ -198,7 +198,7 @@ button {
 }
 
 .site-header .site-title a:focus-visible {
-	outline: 0.4rem solid #8AD077;
+	outline: 0.4rem solid #5B9547;
 	outline-offset: .2rem;
 }
 
@@ -207,7 +207,7 @@ button {
 		outline: none;
 	}
 	.site-header .site-title a:focus-visible span {
-		outline: 0.4rem solid #8AD077;
+		outline: 0.4rem solid #5B9547;
 		outline-offset: -.2rem;
 		border-radius: 1.6rem;
 	}
@@ -281,14 +281,14 @@ button {
 		font-family: "lackregular", serif;
 	}
 	.main-navigation a:hover {
-		background-color: #F0F0D2;
+		background-color: #F2F3C1;
 	}
 	.main-navigation a[aria-current='page'] {
-		background-color: #8AD077;
+		background-color: #51D52D;
 		color: #4B107A;
 	}
 	.main-navigation a[aria-current='page']:hover {
-		background-color: #AFED9E;
+		background-color: #BBE8AF;
 	}
 }
 
@@ -324,12 +324,12 @@ button {
 }
 
 .mobile-navigation a[aria-current='page'] {
-	background-color: #8AD077;
+	background-color: #51D52D;
 	color: #4B107A;
 }
 
 .mobile-navigation a:focus-visible {
-	outline: 0.4rem solid #8AD077;
+	outline: 0.4rem solid #5B9547;
 }
 
 .mobile-navigation > div > ul > li {
@@ -348,7 +348,7 @@ button {
 }
 
 .mobile-navigation .menu-item-has-children:not(:first-child).active-child {
-	background-color: #8AD077;
+	background-color: #51D52D;
 }
 
 .mobile-navigation .menu-item-has-children:not(:first-child).active-child > a::after {
@@ -471,7 +471,7 @@ button {
 }
 
 .main-navigation > div > ul > li:first-child ul li.lang-item a:hover, .mobile-navigation > div > ul > li:first-child ul li.lang-item a:hover {
-	background-color: #F0F0D2;
+	background-color: #F2F3C1;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
@@ -502,12 +502,12 @@ button {
 }
 
 .main-navigation > div > ul > li:first-child ul li.current-lang a, .mobile-navigation > div > ul > li:first-child ul li.current-lang a {
-	background-color: #8AD077;
+	background-color: #51D52D;
 	color: #4B107A;
 }
 
 .main-navigation > div > ul > li:first-child ul li.current-lang a:hover, .mobile-navigation > div > ul > li:first-child ul li.current-lang a:hover {
-	background-color: #AFED9E;
+	background-color: #BBE8AF;
 }
 
 .menu-toggle {
@@ -580,14 +580,14 @@ button {
 		display: block;
 	}
 	.sub-navigation a:hover {
-		background-color: #F0F0D2;
+		background-color: #F2F3C1;
 	}
 	.sub-navigation a[aria-current='page'] {
-		background-color: #8AD077;
+		background-color: #51D52D;
 		color: #4B107A;
 	}
 	.sub-navigation a[aria-current='page']:hover {
-		background-color: #AFED9E;
+		background-color: #BBE8AF;
 	}
 	.sub-navigation a:focus-visible {
 		outline: 0.4rem solid #4B107A;

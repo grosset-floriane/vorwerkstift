@@ -1,19 +1,20 @@
 // Colors
 $color-purple-main: #4B107A;
-$color-purple-light: #6b22a6;
+$color-purple-light: #6B22A6;
 $color-black-dark: #1C1C1C;
 $color-white-light: #FFFFFF;
-$color-green-main:  #8AD077;
+$color-green-main:  #51D52D;
 $color-grey-light: #C0C0C0;
-$color-green-light: #AFED9E;
-$color-yellow-light: #F0F0D2;
+$color-green-light: #BBE8AF;
+$color-green-dark: #5B9547;
+$color-yellow-light: #F2F3C1;
 
 // Spacing
 $spacing: 0.8rem;
 
 // Borders
 $border-width: $spacing / 2;
-$outline-green: .4rem solid $color-green-main;
+$outline-green: $border-width solid $color-green-dark;
 $outline-purple: $border-width solid $color-purple-main;
 $border-purple: $border-width solid $color-purple-main;
 
