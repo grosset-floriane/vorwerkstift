@@ -141,7 +141,7 @@ button {
 		transform: rotate(-90deg) translateX(-100%);
 		margin: 1.6rem;
 		transform-origin: top left;
-		border-radius: 1.6rem;
+		border-radius: 1.2rem;
 		display: block;
 		padding: 0.4rem 3.2rem;
 		max-width: 47.7rem;
