@@ -11,16 +11,7 @@
     background-color: $color-white-light;
     width: fit-content;
     max-width: $width-desktop-main-nav;
-
-    @include mediumLargeHeight {
-      font-size: 3.2rem;
-      max-width: 7rem;
-    }
-
-    @include largeHeight {
-      font-size: 4rem;
-      max-width: 9rem;
-    }
+    height: 100%;
   
     .menu {
       justify-content: stretch;
@@ -33,7 +24,7 @@
       > li {
         flex-grow: 1;
         display: flex;
-  
+        max-height: 14rem;
       }
     }
   

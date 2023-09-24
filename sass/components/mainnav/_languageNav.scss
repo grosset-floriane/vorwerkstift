@@ -8,12 +8,8 @@
       max-width: 4.9rem;
     } 
 
-    @include mediumLargeHeight {
-      max-width: 7rem;
-    }
-
-    @include largeHeight {
-      max-width: 9rem;
+    @include portrait {
+      max-height: 4.4rem * 2;
     }
 
     & > a {
@@ -57,19 +53,15 @@
             width: auto;
             height: 4.4rem;
           }
-
-          @include mediumLargeHeight {
-            font-size: 1.4rem;
-          }
-
-          @include largeHeight {
-            font-size: 1.6rem;
-          }
         }
 
         @include tablet {
           flex-grow: 1;
         }
+      }
+
+      @include portrait {
+        flex-direction: column;
       }
 
       li.current-lang a {

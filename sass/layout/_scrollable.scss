@@ -14,13 +14,4 @@
     padding: $spacing * 2 $spacing * 3 0 $spacing * 2;
   }
 
-  @include mediumLargeHeight {
-    width: calc(100vw - 5rem - #{$spacing} * 2 - #{$width-medium-desktop-main-nav} + #{$border-width});
-
-  }
-
-  @include largeHeight {
-    width: calc(100vw - 5rem - #{$spacing} * 2 - #{$width-large-desktop-main-nav} + #{$border-width});
-
-  }
 }

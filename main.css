@@ -86,18 +86,6 @@ button {
 	}
 }
 
-@media (min-height: 1200px) {
-	.scrollable {
-		width: calc(100vw - 5rem - 0.8rem * 2 - 7rem + 0.4rem);
-	}
-}
-
-@media (min-height: 1440px) {
-	.scrollable {
-		width: calc(100vw - 5rem - 0.8rem * 2 - 9rem + 0.4rem);
-	}
-}
-
 .scrollable::-webkit-scrollbar {
 	width: 1.2rem;
 	/* width of the entire scrollbar */
@@ -242,24 +230,8 @@ button {
 		background-color: #FFFFFF;
 		width: fit-content;
 		max-width: 4.9rem;
+		height: 100%;
 	}
-}
-
-@media (min-width: 651px) and (min-height: 500px) and (min-height: 1200px) {
-	.main-navigation {
-		font-size: 3.2rem;
-		max-width: 7rem;
-	}
-}
-
-@media (min-width: 651px) and (min-height: 500px) and (min-height: 1440px) {
-	.main-navigation {
-		font-size: 4rem;
-		max-width: 9rem;
-	}
-}
-
-@media (min-width: 651px) and (min-height: 500px) {
 	.main-navigation .menu {
 		justify-content: stretch;
 		flex-direction: column;
@@ -271,6 +243,7 @@ button {
 	.main-navigation .menu > li {
 		flex-grow: 1;
 		display: flex;
+		max-height: 14rem;
 	}
 	.main-navigation a {
 		padding: 0 0.8rem;
@@ -424,15 +397,9 @@ button {
 	}
 }
 
-@media (min-height: 1200px) {
+@media (orientation: portrait) {
 	.main-navigation > div > ul > li:first-child, .mobile-navigation > div > ul > li:first-child {
-		max-width: 7rem;
-	}
-}
-
-@media (min-height: 1440px) {
-	.main-navigation > div > ul > li:first-child, .mobile-navigation > div > ul > li:first-child {
-		max-width: 9rem;
+		max-height: 8.8rem;
 	}
 }
 
@@ -483,21 +450,15 @@ button {
 	}
 }
 
-@media (min-height: 1200px) {
-	.main-navigation > div > ul > li:first-child ul li.lang-item a, .mobile-navigation > div > ul > li:first-child ul li.lang-item a {
-		font-size: 1.4rem;
-	}
-}
-
-@media (min-height: 1440px) {
-	.main-navigation > div > ul > li:first-child ul li.lang-item a, .mobile-navigation > div > ul > li:first-child ul li.lang-item a {
-		font-size: 1.6rem;
-	}
-}
-
 @media (min-width: 651px) and (min-height: 500px) {
 	.main-navigation > div > ul > li:first-child ul li.lang-item, .mobile-navigation > div > ul > li:first-child ul li.lang-item {
 		flex-grow: 1;
+	}
+}
+
+@media (orientation: portrait) {
+	.main-navigation > div > ul > li:first-child ul, .mobile-navigation > div > ul > li:first-child ul {
+		flex-direction: column;
 	}
 }
 

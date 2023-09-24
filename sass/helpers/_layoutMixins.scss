@@ -24,6 +24,13 @@
   }
 }
 
+// Orientation specific
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
 
 // Media queries for main nav according to height of big screens
 @mixin mediumLargeHeight {
