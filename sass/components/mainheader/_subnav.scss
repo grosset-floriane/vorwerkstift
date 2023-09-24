@@ -29,9 +29,11 @@
             border-radius: $spacing * 3;
             text-decoration: none;
             display: block;
+            transition: $hover-transition;
 
             &:hover {
                 background-color: $color-yellow-light;
+                transition: $hover-transition;
               }
 
             &[aria-current='page'] {
@@ -40,6 +42,7 @@
         
                 &:hover {
                   background-color: $color-green-light;
+                  transition: $hover-transition;
                 }
             }
 

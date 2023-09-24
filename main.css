@@ -133,9 +133,11 @@ button {
 		display: block;
 		padding: 0.4rem 3.2rem;
 		max-width: 47.7rem;
+		transition: ease-in-out background-color 100ms;
 	}
 	.site-header:hover {
 		background-color: #6B22A6;
+		transition: ease-in-out background-color 100ms;
 	}
 }
 
@@ -252,9 +254,11 @@ button {
 		text-decoration: none;
 		text-align: center;
 		font-family: "lackregular", serif;
+		transition: ease-in-out background-color 100ms;
 	}
 	.main-navigation a:hover {
 		background-color: #F2F3C1;
+		transition: ease-in-out background-color 100ms;
 	}
 	.main-navigation a[aria-current='page'] {
 		background-color: #51D52D;
@@ -262,6 +266,7 @@ button {
 	}
 	.main-navigation a[aria-current='page']:hover {
 		background-color: #BBE8AF;
+		transition: ease-in-out background-color 100ms;
 	}
 }
 
@@ -435,10 +440,12 @@ button {
 	align-items: center;
 	justify-content: center;
 	background-color: #FFFFFF;
+	transition: ease-in-out background-color 100ms;
 }
 
 .main-navigation > div > ul > li:first-child ul li.lang-item a:hover, .mobile-navigation > div > ul > li:first-child ul li.lang-item a:hover {
 	background-color: #F2F3C1;
+	transition: ease-in-out background-color 100ms;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
@@ -465,10 +472,12 @@ button {
 .main-navigation > div > ul > li:first-child ul li.current-lang a, .mobile-navigation > div > ul > li:first-child ul li.current-lang a {
 	background-color: #51D52D;
 	color: #4B107A;
+	transition: ease-in-out background-color 100ms;
 }
 
 .main-navigation > div > ul > li:first-child ul li.current-lang a:hover, .mobile-navigation > div > ul > li:first-child ul li.current-lang a:hover {
 	background-color: #BBE8AF;
+	transition: ease-in-out background-color 100ms;
 }
 
 .menu-toggle {
@@ -539,9 +548,11 @@ button {
 		border-radius: 2.4rem;
 		text-decoration: none;
 		display: block;
+		transition: ease-in-out background-color 100ms;
 	}
 	.sub-navigation a:hover {
 		background-color: #F2F3C1;
+		transition: ease-in-out background-color 100ms;
 	}
 	.sub-navigation a[aria-current='page'] {
 		background-color: #51D52D;
@@ -549,6 +560,7 @@ button {
 	}
 	.sub-navigation a[aria-current='page']:hover {
 		background-color: #BBE8AF;
+		transition: ease-in-out background-color 100ms;
 	}
 	.sub-navigation a:focus-visible {
 		outline: 0.4rem solid #4B107A;

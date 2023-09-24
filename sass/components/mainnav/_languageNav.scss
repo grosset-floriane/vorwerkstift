@@ -42,9 +42,11 @@
           align-items: center;
           justify-content: center;
           background-color: $color-white-light;
+          transition: $hover-transition;
 
           &:hover {
             background-color: $color-yellow-light;
+            transition: $hover-transition;
           }
 
           @include tablet {
@@ -67,9 +69,11 @@
       li.current-lang a {
         background-color: $color-green-main;
         color: $color-purple-main;
+        transition: $hover-transition;
 
         &:hover {
           background-color: $color-green-light;
+          transition: $hover-transition;
         }
       }
     }

@@ -35,9 +35,11 @@
       text-decoration: none;
       text-align: center;
       font-family: $font-headings;
+      transition: $hover-transition;
 
       &:hover {
         background-color: $color-yellow-light;
+        transition: $hover-transition;
       }
   
       &[aria-current='page'] {
@@ -46,6 +48,7 @@
 
         &:hover {
           background-color: $color-green-light;
+          transition: $hover-transition;
         }
       }
     }

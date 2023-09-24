@@ -24,9 +24,11 @@
   display: block;
   padding: $spacing / 2 $spacing * 4;
   max-width: 47.7rem;
+  transition: $hover-transition;
 
   &:hover {
     background-color: $color-purple-light;
+    transition: $hover-transition;
   }
   }
 
