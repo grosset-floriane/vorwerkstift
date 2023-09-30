@@ -44,7 +44,7 @@ get_header();
 
 				if($menuID) {
 					?>
-						<p class="section-title"><?php echo $sectionTitle; ?></p>
+						<p class="section-title" id="section-title"><?php echo $sectionTitle; ?></p>
 						<nav class="sub-navigation">
 							<?php
 								wp_nav_menu(

@@ -42,7 +42,7 @@
         transition: $hover-transition;
       }
   
-      &[aria-current='page'] {
+      &[aria-current='page'], &.active-child {
         background-color: $color-green-main;
         color: $color-purple-main;
 

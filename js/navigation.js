@@ -7,6 +7,7 @@
 
 ;(function () {
   const siteNavigation = document.getElementById("site-navigation")
+  const mainNavigation = document.getElementById("main-navigation")
   const header = document.getElementById("masthead")
 
   // Return early if the navigation doesn't exist.
@@ -95,12 +96,22 @@
     }
   })
 
-  // Add class on parent element when a child is active
+  // Add class on parent element when a child is active (mobile)
   const activeLinks = siteNavigation.querySelectorAll('a[aria-current="page"]')
   for (const active of activeLinks) {
     // The links are not the language ones
     if (active.innerHTML !== "Home") {
       active.parentNode.parentNode.parentNode.classList.add("active-child")
+    }
+  }
+
+  // Add class on parent element when a child is active (desktop)
+  const sectionTitle = document.getElementById('section-title').innerHTML
+  const allLinks = mainNavigation.getElementsByTagName('a')
+  for (const link of allLinks) {
+    if(link.innerHTML === sectionTitle) {
+      link.classList.add('active-child')
+      break
     }
   }
 
