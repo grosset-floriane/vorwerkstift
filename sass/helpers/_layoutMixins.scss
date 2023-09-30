@@ -26,7 +26,7 @@
 
 // Orientation specific
 @mixin portrait {
-  @media (orientation: portrait) {
+  @media (orientation: portrait) and (min-width: 651px) and (min-height: 500px) {
     @content;
   }
 }
