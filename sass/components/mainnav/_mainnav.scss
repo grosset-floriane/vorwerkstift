@@ -1,0 +1,58 @@
+.main-navigation {
+  display: none;
+  @include tablet {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-left: $border-purple;
+    font-size: 1.8rem;
+    font-family: $font-headings;
+    background-color: $color-white-light;
+    width: fit-content;
+    max-width: $width-desktop-main-nav;
+    height: 100%;
+  
+    .menu {
+      justify-content: stretch;
+      flex-direction: column;
+      height: 100vh;
+      max-height: 100vh;
+      flex-wrap: wrap;
+      display: flex;
+  
+      > li {
+        flex-grow: 1;
+        display: flex;
+        max-height: 14rem;
+      }
+    }
+  
+    a {
+      padding: 0 $spacing;
+      writing-mode: vertical-rl;
+      color: $color-black-dark;
+      text-decoration: none;
+      text-align: center;
+      font-family: $font-headings;
+      transition: $hover-transition;
+
+      &:hover {
+        background-color: $color-yellow-light;
+        transition: $hover-transition;
+      }
+  
+      &[aria-current='page'], &.active-child {
+        background-color: $color-green-main;
+        color: $color-purple-main;
+
+        &:hover {
+          background-color: $color-green-light;
+          transition: $hover-transition;
+        }
+      }
+    }
+    
+  }
+
+}

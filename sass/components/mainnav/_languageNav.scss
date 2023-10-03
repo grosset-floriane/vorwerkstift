@@ -1,0 +1,81 @@
+.main-navigation, .mobile-navigation {
+  > div > ul > li:first-child {
+    padding: 0;
+    background-color: transparent;
+
+    @include tablet {
+      max-height: 4.4rem;
+      max-width: 4.9rem;
+    } 
+
+    @include portrait {
+      max-height: 4.4rem * 2;
+    }
+
+    & > a {
+      display: none;
+    } 
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      position: static;
+      z-index: auto;
+      box-shadow: none;
+      float: none;
+      gap: $spacing * 2;
+
+      @include tablet {
+        gap: 0;
+        justify-content: stretch;
+        width: 100%;
+      }
+
+      li.lang-item {
+        a {
+          writing-mode: horizontal-tb;
+         font-size: 1.4rem;
+          padding: $spacing * 2;
+          width: 4.4rem;
+          height: 4.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $color-white-light;
+          transition: $hover-transition;
+
+          &:hover {
+            background-color: $color-yellow-light;
+            transition: $hover-transition;
+          }
+
+          @include tablet {
+            padding: 0;
+            font-size: 1rem;
+            width: auto;
+            height: 4.4rem;
+          }
+        }
+
+        @include tablet {
+          flex-grow: 1;
+        }
+      }
+
+      @include portrait {
+        flex-direction: column;
+      }
+
+      li.current-lang a {
+        background-color: $color-green-main;
+        color: $color-purple-main;
+        transition: $hover-transition;
+
+        &:hover {
+          background-color: $color-green-light;
+          transition: $hover-transition;
+        }
+      }
+    }
+  }
+}

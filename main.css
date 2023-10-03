@@ -30,16 +30,22 @@ with others.
 	font-size: 62.5%;
 }
 
+* {
+	line-height: 1.6;
+}
+
 html,
 body {
 	margin: 0;
 	color: black;
 	background-color: transparent;
-	font-family: "Open sans";
-	overflow-x: hidden;
+	font-family: "Open sans", sans-serif;
+	overflow: hidden;
+	background-color: #C0C0C0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	font-size: 1.6rem;
+	line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,6 +54,518 @@ h1, h2, h3, h4, h5, h6 {
 
 a, button {
 	touch-action: manipulation;
+}
+
+a:focus-visible, button:focus-visible {
+	outline: 0.4rem solid #5B9547;
+	outline-offset: -0.4rem;
+}
+
+a {
+	font-family: "Open sans", sans-serif;
+}
+
+button {
+	font-family: "lackregular", serif;
+}
+
+.scrollable {
+	overflow-y: auto;
+	height: calc(100vh - 7rem);
+	padding: 1.6rem;
+	margin-top: 7rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.scrollable {
+		height: 100vh;
+		width: calc(100vw - 5rem - 0.8rem * 2 - 4.9rem + 0.4rem);
+		margin-left: calc(5rem + 0.8rem * 2);
+		margin-top: 0;
+		padding: 1.6rem 2.4rem 0 1.6rem;
+	}
+}
+
+.scrollable::-webkit-scrollbar {
+	width: 1.2rem;
+	/* width of the entire scrollbar */
+}
+
+.scrollable::-webkit-scrollbar-track {
+	background: transparent;
+	/* color of the tracking area */
+	border: 0.4rem solid #4B107A;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+	background-color: #4B107A;
+	/* color of the scroll thumb */
+	border-radius: 2rem;
+	/* roundness of the scroll thumb */
+	border: 0.4rem solid #4B107A;
+	/* creates padding around scroll thumb */
+}
+
+.site-header {
+	top: 0;
+	left: 0;
+	background-color: #4B107A;
+	position: fixed;
+	padding: 1.6rem;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	z-index: 999;
+}
+
+.site-header.toggled {
+	height: 100vh;
+	max-height: 100vh;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.site-header {
+		transform: rotate(-90deg) translateX(-100%);
+		margin: 1.6rem;
+		transform-origin: top left;
+		border-radius: 1.2rem;
+		display: block;
+		padding: 0.4rem 3.2rem;
+		max-width: 47.7rem;
+		transition: ease-in-out background-color 100ms;
+	}
+	.site-header:hover {
+		background-color: #6B22A6;
+		transition: ease-in-out background-color 100ms;
+	}
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.site-header .site-branding {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.6rem;
+		font-family: 'Lack';
+		max-width: 48.8rem;
+	}
+}
+
+.site-header .site-branding > p {
+	margin: 0;
+}
+
+.site-header .site-title a {
+	color: #51D52D;
+	font-size: 2rem;
+	font-family: "lackregular", serif;
+	text-decoration: none;
+	white-space: nowrap;
+	line-height: 1;
+	/* Whole header clickable */
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.site-header .site-title a {
+		font-size: 4rem;
+	}
+}
+
+.site-header .site-title a span {
+	display: none;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.site-header .site-title a span {
+		display: initial;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.site-header .site-title a:focus-visible {
+	outline: 0.4rem solid #5B9547;
+	outline-offset: .2rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.site-header .site-title a:focus-visible {
+		outline: none;
+	}
+	.site-header .site-title a:focus-visible span {
+		outline: 0.4rem solid #5B9547;
+		outline-offset: -.2rem;
+		border-radius: 1.6rem;
+	}
+}
+
+.site-header .site-description {
+	color: #FFFFFF;
+	font-family: "lackregular", serif;
+	font-size: 1.4rem;
+	line-height: 1;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.site-header .site-description {
+		font-size: 1.6rem;
+	}
+}
+
+.main-navigation {
+	display: none;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.main-navigation {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		border-left: 0.4rem solid #4B107A;
+		font-size: 1.8rem;
+		font-family: "lackregular", serif;
+		background-color: #FFFFFF;
+		width: fit-content;
+		max-width: 4.9rem;
+		height: 100%;
+	}
+	.main-navigation .menu {
+		justify-content: stretch;
+		flex-direction: column;
+		height: 100vh;
+		max-height: 100vh;
+		flex-wrap: wrap;
+		display: flex;
+	}
+	.main-navigation .menu > li {
+		flex-grow: 1;
+		display: flex;
+		max-height: 14rem;
+	}
+	.main-navigation a {
+		padding: 0 0.8rem;
+		writing-mode: vertical-rl;
+		color: #1C1C1C;
+		text-decoration: none;
+		text-align: center;
+		font-family: "lackregular", serif;
+		transition: ease-in-out background-color 100ms;
+	}
+	.main-navigation a:hover {
+		background-color: #F2F3C1;
+		transition: ease-in-out background-color 100ms;
+	}
+	.main-navigation a[aria-current='page'], .main-navigation a.active-child {
+		background-color: #51D52D;
+		color: #4B107A;
+	}
+	.main-navigation a[aria-current='page']:hover, .main-navigation a.active-child:hover {
+		background-color: #BBE8AF;
+		transition: ease-in-out background-color 100ms;
+	}
+}
+
+.mobile-navigation {
+	width: 100%;
+	display: none;
+	margin-top: 0.8rem;
+	height: calc(100vh - 7rem);
+	overflow-y: auto;
+	padding-bottom: 1.6rem;
+	/* Category titles */
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.mobile-navigation {
+		display: none;
+	}
+}
+
+.mobile-navigation.toggled {
+	display: block;
+}
+
+.mobile-navigation ul, .mobile-navigation li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: "lackregular", serif;
+}
+
+.mobile-navigation a {
+	text-decoration: none;
+	font-family: "lackregular", serif;
+}
+
+.mobile-navigation a[aria-current='page'] {
+	background-color: #51D52D;
+	color: #4B107A;
+}
+
+.mobile-navigation a:focus-visible {
+	outline: 0.4rem solid #5B9547;
+}
+
+.mobile-navigation > div > ul > li {
+	background-color: #FFFFFF;
+	width: 100%;
+	display: block;
+	margin-top: 1.6rem;
+	font-size: 2.4rem;
+}
+
+.mobile-navigation > div > ul > li a {
+	color: #1C1C1C;
+	text-align: center;
+	display: block;
+	padding: 1.6rem;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child).active-child {
+	background-color: #51D52D;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child).active-child > a::after {
+	background-image: url("/wp-content/themes/vorwerkstift/assets/images/arrow-top-purple.svg");
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child).active-child a {
+	color: #4B107A;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child).active-child a[aria-current='page'] {
+	color: #1C1C1C;
+	background-color: #FFFFFF;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child) > a {
+	position: relative;
+	/* Arrow */
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child) > a.focus ~ ul {
+	display: block;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child) > a::after {
+	content: ' ';
+	background: url("/wp-content/themes/vorwerkstift/assets/images/arrow-top-black.svg") center center;
+	width: 4.8rem;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0.4rem;
+	transform-origin: center;
+	transform: rotate(180deg);
+	transition: ease-in transform 300ms;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child) > a.focus::after {
+	transform: rotate(0deg);
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child) > ul {
+	display: none;
+	padding: .8rem 1.6rem 1.6rem;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child) > ul a:not([lang]) {
+	font-size: 1.4rem;
+	border-radius: 1.6rem;
+	padding: 0.4rem;
+	margin-bottom: 1.2rem;
+	text-transform: uppercase;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child) > ul a:not([lang])[aria-current="page"] {
+	background-color: #FFFFFF;
+}
+
+.mobile-navigation .menu-item-has-children:not(:first-child) > ul li:last-child a {
+	margin-bottom: 0;
+}
+
+.main-navigation > div > ul > li:first-child, .mobile-navigation > div > ul > li:first-child {
+	padding: 0;
+	background-color: transparent;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.main-navigation > div > ul > li:first-child, .mobile-navigation > div > ul > li:first-child {
+		max-height: 4.4rem;
+		max-width: 4.9rem;
+	}
+}
+
+@media (orientation: portrait) and (min-width: 651px) and (min-height: 500px) {
+	.main-navigation > div > ul > li:first-child, .mobile-navigation > div > ul > li:first-child {
+		max-height: 8.8rem;
+	}
+}
+
+.main-navigation > div > ul > li:first-child > a, .mobile-navigation > div > ul > li:first-child > a {
+	display: none;
+}
+
+.main-navigation > div > ul > li:first-child ul, .mobile-navigation > div > ul > li:first-child ul {
+	display: flex;
+	justify-content: flex-end;
+	position: static;
+	z-index: auto;
+	box-shadow: none;
+	float: none;
+	gap: 1.6rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.main-navigation > div > ul > li:first-child ul, .mobile-navigation > div > ul > li:first-child ul {
+		gap: 0;
+		justify-content: stretch;
+		width: 100%;
+	}
+}
+
+.main-navigation > div > ul > li:first-child ul li.lang-item a, .mobile-navigation > div > ul > li:first-child ul li.lang-item a {
+	writing-mode: horizontal-tb;
+	font-size: 1.4rem;
+	padding: 1.6rem;
+	width: 4.4rem;
+	height: 4.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #FFFFFF;
+	transition: ease-in-out background-color 100ms;
+}
+
+.main-navigation > div > ul > li:first-child ul li.lang-item a:hover, .mobile-navigation > div > ul > li:first-child ul li.lang-item a:hover {
+	background-color: #F2F3C1;
+	transition: ease-in-out background-color 100ms;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.main-navigation > div > ul > li:first-child ul li.lang-item a, .mobile-navigation > div > ul > li:first-child ul li.lang-item a {
+		padding: 0;
+		font-size: 1rem;
+		width: auto;
+		height: 4.4rem;
+	}
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.main-navigation > div > ul > li:first-child ul li.lang-item, .mobile-navigation > div > ul > li:first-child ul li.lang-item {
+		flex-grow: 1;
+	}
+}
+
+@media (orientation: portrait) and (min-width: 651px) and (min-height: 500px) {
+	.main-navigation > div > ul > li:first-child ul, .mobile-navigation > div > ul > li:first-child ul {
+		flex-direction: column;
+	}
+}
+
+.main-navigation > div > ul > li:first-child ul li.current-lang a, .mobile-navigation > div > ul > li:first-child ul li.current-lang a {
+	background-color: #51D52D;
+	color: #4B107A;
+	transition: ease-in-out background-color 100ms;
+}
+
+.main-navigation > div > ul > li:first-child ul li.current-lang a:hover, .mobile-navigation > div > ul > li:first-child ul li.current-lang a:hover {
+	background-color: #BBE8AF;
+	transition: ease-in-out background-color 100ms;
+}
+
+.menu-toggle {
+	background-color: transparent;
+	border: none;
+	color: #FFFFFF;
+	font-size: 1.4rem;
+	margin-right: -1.6rem;
+	font-family: "Open sans", sans-serif;
+	display: block;
+}
+
+.menu-toggle.toggled {
+	background: url("/wp-content/themes/vorwerkstift/assets/images/cross.svg") no-repeat center;
+	margin-right: 0;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.menu-toggle {
+		display: none;
+	}
+}
+
+.section-title {
+	font-size: 3.2rem;
+	font-family: "lackregular", serif;
+	color: #4B107A;
+	margin: 0;
+	text-align: center;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.section-title {
+		font-size: 6.4rem;
+		text-align: left;
+		line-height: 0.7;
+	}
+}
+
+.sub-navigation {
+	display: none;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.sub-navigation {
+		display: block;
+		margin-top: 1.6rem;
+	}
+	.sub-navigation ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		gap: 0.8rem;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	.sub-navigation li {
+		list-style: none;
+		height: fit-content;
+	}
+	.sub-navigation a {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		font-family: "lackregular", serif;
+		background-color: #FFFFFF;
+		color: #1C1C1C;
+		padding: 0.2rem 1.6rem;
+		border-radius: 2.4rem;
+		text-decoration: none;
+		display: block;
+		transition: ease-in-out background-color 100ms;
+	}
+	.sub-navigation a:hover {
+		background-color: #F2F3C1;
+		transition: ease-in-out background-color 100ms;
+	}
+	.sub-navigation a[aria-current='page'] {
+		background-color: #51D52D;
+		color: #4B107A;
+	}
+	.sub-navigation a[aria-current='page']:hover {
+		background-color: #BBE8AF;
+		transition: ease-in-out background-color 100ms;
+	}
+	.sub-navigation a:focus-visible {
+		outline: 0.4rem solid #4B107A;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */

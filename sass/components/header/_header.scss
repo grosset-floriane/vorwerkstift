@@ -1,0 +1,106 @@
+.site-header {
+  top: 0;
+  left: 0;
+  background-color: $color-purple-main;
+  position: fixed;
+  padding: $spacing * 2;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 999;
+
+  &.toggled {
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+
+  @include tablet {
+  transform: rotate(-90deg) translateX(-100%);
+  margin: $spacing * 2;
+  transform-origin: top left;
+  border-radius: 1.2rem;
+  display: block;
+  padding: $spacing / 2 $spacing * 4;
+  max-width: 47.7rem;
+  transition: $hover-transition;
+
+  &:hover {
+    background-color: $color-purple-light;
+    transition: $hover-transition;
+  }
+  }
+
+  
+ 
+
+  .site-branding {
+    
+
+    @include tablet {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing * 2;
+    font-family: 'Lack';
+    max-width: 48.8rem;
+    }
+
+    & > p {
+      margin: 0;
+    }
+  }
+
+  .site-title a {
+    color: $color-green-main;
+    font-size: 2rem;
+    font-family: $font-headings;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1;
+
+    @include tablet {
+      font-size: 4rem;
+    }
+
+    /* Whole header clickable */
+    span {
+      display: none;
+      @include tablet {
+        display: initial;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &:focus-visible {
+      outline: $outline-green;
+      outline-offset: .2rem;
+
+      @include tablet {
+        outline: none;
+        span {
+        outline: $outline-green;
+        outline-offset: -.2rem;
+        border-radius: $spacing * 2;
+        }
+
+      }
+    }
+  }
+
+  .site-description {
+    color: $color-white-light;
+    font-family: $font-headings;
+    font-size: 1.4rem;
+    line-height: 1;
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
+  }
+}
