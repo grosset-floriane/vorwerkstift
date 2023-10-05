@@ -34,7 +34,9 @@
 		<?php include 'components/mobile-nav/mobile-nav.php'; ?>
 
 	</header><!-- #masthead -->
-
+	<aside id="sidebar-tablet" class="widget-area">
+		<?php dynamic_sidebar( 'sidebar-tablet' ); ?>
+	</aside>
 <!-- Main navigation -->
 	<?php include 'components/desktop-nav/desktop-nav.php'; ?>
 

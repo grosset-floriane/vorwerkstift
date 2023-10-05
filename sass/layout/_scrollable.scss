@@ -1,17 +1,16 @@
 .scrollable {
   overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
   height: calc(100vh - #{$height-mobile-header});
-  padding: $spacing * 2;
   margin-top: $height-mobile-header;
-  
-  
 
   @include tablet {
+    padding: $spacing * 2;
     height: 100vh;
     width: calc(100vw - 5rem - #{$spacing} * 2 - #{$width-desktop-main-nav} + #{$border-width});
     margin-left: calc(5rem + #{$spacing} * 2);
     margin-top: 0;
     padding: $spacing * 2 $spacing * 3 0 $spacing * 2;
   }
-
 }

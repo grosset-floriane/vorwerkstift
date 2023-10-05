@@ -1,0 +1,12 @@
+#primary {
+    max-width: 112rem;
+
+    @include tablet {
+        width: calc(100% - #{$spacing} * 7);
+    }
+
+    @include desktop {
+        width: 75%;
+    }
+    
+}

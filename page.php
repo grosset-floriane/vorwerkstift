@@ -72,8 +72,10 @@ get_header();
 
 	</main><!-- #main -->
 
+	<aside id="sidebar-desktop" class="widget-area">
+		<?php dynamic_sidebar( 'sidebar-desktop' ); ?>
+	</aside>
 <?php
-get_sidebar();
 get_footer();
 
 ?>
