@@ -16,7 +16,6 @@ get_header();
 ?>
 <div class="scrollable">
 <main id="primary" class="site-main">
-	<header>
 
 		<?php
 		while ( have_posts() ) :
@@ -28,19 +27,10 @@ get_header();
 			*/
 
 			// get all the section categories
-			$terms = get_the_terms(get_the_ID(), 'section');
-
-			$activeLang = pll_current_language();
-	
-			if (! empty( $terms ) ) {
-				foreach($terms as $term) {
-					$menuID = $term->slug . '-menu';
-					$sectionTitle = $term->name;
-					if($activeLang === 'de') {
-						$sectionTitle = $term->description;
-					}
-						
-				}
+			$currentSection = vorwerkstift_get_section_category();
+			if(!empty($currentSection)) {
+				$menuID = $currentSection["menuID"];
+				$sectionTitle = $currentSection["sectionTitle"];
 
 				if($menuID) {
 					?>
@@ -63,14 +53,9 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
 		endwhile; // End of the loop.
 		?>
-		</header>
+		
 
 	</main><!-- #main -->
 
