@@ -44,6 +44,7 @@ get_header();
 
 				if($menuID) {
 					?>
+					<header>
 						<p class="section-title" id="section-title"><?php echo $sectionTitle; ?></p>
 						<nav class="sub-navigation">
 							<?php
@@ -55,6 +56,7 @@ get_header();
 								);
 							?>
 						</nav>
+						</header>
 					<?php
 				}
 			}
