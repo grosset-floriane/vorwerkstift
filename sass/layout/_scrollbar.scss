@@ -1,14 +1,16 @@
-.scrollable::-webkit-scrollbar {
-  width: 1.2rem;               /* width of the entire scrollbar */
-}
-
-.scrollable::-webkit-scrollbar-track {
-  background: transparent;        /* color of the tracking area */
-  border: $border-purple; 
-}
-
-.scrollable::-webkit-scrollbar-thumb {
-  background-color: $color-purple-main;    /* color of the scroll thumb */
-  border-radius: 2rem;       /* roundness of the scroll thumb */
-  border: $border-purple;  /* creates padding around scroll thumb */
+@include desktop {
+  .scrollable::-webkit-scrollbar {
+    width: 1.2rem;               /* width of the entire scrollbar */
+  }
+  
+  .scrollable::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+    border: $border-purple; 
+  }
+  
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: $color-purple-main;    /* color of the scroll thumb */
+    border-radius: 2rem;       /* roundness of the scroll thumb */
+    border: $border-purple;  /* creates padding around scroll thumb */
+  }
 }

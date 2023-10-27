@@ -1,0 +1,17 @@
+#main-container {
+  max-width: 112rem;
+
+  @include tablet {
+    width: calc(100% - #{$spacing} * 11);
+    margin-left: $spacing * 2;
+  }
+
+  @include desktop {
+    width: 100%;
+    display: flex;
+    margin-left: 5rem + $spacing * 2;
+    #primary {
+      width: 75%;
+    }
+  }
+}

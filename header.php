@@ -25,16 +25,8 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'vorwerkstift' ); ?></a>
-
-	<header id="masthead" class="site-header">
- 		<?php include 'components/site-branding/site-branding.php'; ?>
-
-		<?php include 'components/mobile-nav/mobile-nav.php'; ?>
-
-	</header><!-- #masthead -->
-
-<!-- Main navigation -->
-	<?php include 'components/desktop-nav/desktop-nav.php'; ?>
+	
 

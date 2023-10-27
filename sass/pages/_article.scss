@@ -1,0 +1,50 @@
+.page article {
+  background-color: $color-white-light;
+  margin-top: 14rem;
+  @include tablet {
+    margin-top: $spacing * 9.5;
+  }
+
+  .post-thumbnail {
+    height: fit-content;
+    line-height: 0;
+    img {
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      object-position: top center;
+
+      @include desktop {
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+
+  .entry-inner-container {
+    padding: $spacing * 3;
+    padding-left: $spacing * 2;
+
+    @include tablet {
+      padding: $spacing * 5 $spacing * 11;
+      padding-left: $spacing * 8;
+    }
+  }
+
+  .entry-title {
+    margin-top: 0;
+    margin-bottom: $spacing * 2;
+    font-weight: normal;
+    font-size: $font-size-medium;
+    max-width: 54.4rem;
+    @include tablet {
+      font-size: $font-size-large;
+    }
+  }
+
+  .entry-content {
+    margin: $spacing * 2 0;
+  }
+
+  p {
+    max-width: 54.4rem;
+  }
+}

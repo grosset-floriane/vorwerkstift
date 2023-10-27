@@ -1,3 +1,11 @@
+#header-container {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 4.8rem;
+  }
+}
+
 .site-header {
   top: 0;
   left: 0;
@@ -15,36 +23,31 @@
     max-height: 100vh;
   }
 
-
   @include tablet {
-  transform: rotate(-90deg) translateX(-100%);
-  margin: $spacing * 2;
-  transform-origin: top left;
-  border-radius: 1.2rem;
-  display: block;
-  padding: $spacing / 2 $spacing * 4;
-  max-width: 47.7rem;
-  transition: $hover-transition;
-
-  &:hover {
-    background-color: $color-purple-light;
+    transform: rotate(-90deg) translateX(-100%);
+    margin: $spacing * 2;
+    transform-origin: top left;
+    border-radius: 1.2rem;
+    display: block;
+    padding: $spacing / 2 $spacing * 4;
+    max-width: 47.7rem;
     transition: $hover-transition;
-  }
-  }
+    height: fit-content;
 
-  
- 
+    &:hover {
+      background-color: $color-purple-light;
+      transition: $hover-transition;
+    }
+  }
 
   .site-branding {
-    
-
     @include tablet {
       display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: $spacing * 2;
-    font-family: 'Lack';
-    max-width: 48.8rem;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing * 2;
+      font-family: 'Lack';
+      max-width: 48.8rem;
     }
 
     & > p {
@@ -79,16 +82,15 @@
 
     &:focus-visible {
       outline: $outline-green;
-      outline-offset: .2rem;
+      outline-offset: 0.2rem;
 
       @include tablet {
         outline: none;
         span {
-        outline: $outline-green;
-        outline-offset: -.2rem;
-        border-radius: $spacing * 2;
+          outline: $outline-green;
+          outline-offset: -0.2rem;
+          border-radius: $spacing * 2;
         }
-
       }
     }
   }
