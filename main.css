@@ -251,6 +251,12 @@ body.the-house-menu {
 	}
 }
 
+@media (min-width: 880px) and (min-height: 500px) {
+	#header-container {
+		width: 0;
+	}
+}
+
 .site-header {
 	top: 0;
 	left: 0;
