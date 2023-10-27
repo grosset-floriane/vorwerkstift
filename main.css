@@ -69,8 +69,14 @@ button {
 	font-family: "lackregular", serif;
 }
 
+body {
+	background-attachment: local;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 body.the-house-menu {
-	background: local url(./assets/images/the-house-white-svg-72dpi.svg) no-repeat top center;
+	background-image: url(./assets/images/the-house-white-svg-72dpi.svg);
 	background-position: 50% 14rem;
 	background-size: 120%;
 }
@@ -84,6 +90,66 @@ body.the-house-menu {
 
 @media (min-width: 880px) and (min-height: 500px) {
 	body.the-house-menu {
+		background-size: 70%;
+		background-position: 55% 2rem;
+	}
+}
+
+body.galerie21-menu {
+	background-image: url(./assets/images/gallery-white.svg);
+	background-size: 100%;
+	background-position: 50% 15rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	body.galerie21-menu {
+		background-position: 52% 2rem;
+		background-size: 78%;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	body.galerie21-menu {
+		background-size: 50%;
+		background-position: 65% 2rem;
+	}
+}
+
+body.residencies-menu {
+	background-image: url(./assets/images/residencies-white.svg);
+	background-size: 100%;
+	background-position: 50% 15rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	body.residencies-menu {
+		background-position: 52% 2rem;
+		background-size: 78%;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	body.residencies-menu {
+		background-size: 70%;
+		background-position: 55% 2rem;
+	}
+}
+
+body.contact-menu {
+	background-image: url(./assets/images/contact-white.svg);
+	background-size: 100%;
+	background-position: 50% 15rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	body.contact-menu {
+		background-position: 52% 2rem;
+		background-size: 78%;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	body.contact-menu {
 		background-size: 70%;
 		background-position: 55% 2rem;
 	}
