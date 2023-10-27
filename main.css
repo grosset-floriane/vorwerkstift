@@ -89,6 +89,13 @@ body.the-house-menu {
 	}
 }
 
+@media (min-width: 651px) and (min-height: 500px) {
+	body .site {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
 .scrollable {
 	overflow-y: auto;
 	display: flex;
@@ -99,27 +106,34 @@ body.the-house-menu {
 
 @media (min-width: 651px) and (min-height: 500px) {
 	.scrollable {
+		display: flex;
+		flex-wrap: wrap;
 		padding: 1.6rem;
 		height: 100vh;
-		width: calc(100vw - 5rem - 0.8rem * 2 - 4.9rem + 0.4rem);
-		margin-left: calc(5rem + 0.8rem * 2);
+		width: calc(100vw - 4.9rem + 0.4rem);
 		margin-top: 0;
 		padding: 1.6rem 2.4rem 0 1.6rem;
 	}
 }
 
-#primary {
+#main-container {
 	max-width: 112rem;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
-	#primary {
-		width: calc(100% - 0.8rem * 7);
+	#main-container {
+		width: calc(100% - 0.8rem * 11);
+		margin-left: 1.6rem;
 	}
 }
 
 @media (min-width: 880px) and (min-height: 500px) {
-	#primary {
+	#main-container {
+		width: 100%;
+		display: flex;
+		margin-left: 6.6rem;
+	}
+	#main-container #primary {
 		width: 75%;
 	}
 }
@@ -153,10 +167,15 @@ body.the-house-menu {
 @media (min-width: 651px) and (min-height: 500px) {
 	#sidebar-tablet {
 		display: initial;
-		position: fixed;
-		bottom: 0;
+		position: sticky;
+		top: 0;
 		left: 0;
-		margin: 1.6rem;
+	}
+	#sidebar-tablet .container {
+		height: calc(100vh - 0.8rem * 2);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 	}
 	#sidebar-tablet p {
 		display: none;
@@ -206,6 +225,14 @@ body.the-house-menu {
 	}
 }
 
+@media (min-width: 651px) and (min-height: 500px) {
+	#header-container {
+		display: flex;
+		flex-direction: column;
+		width: 4.8rem;
+	}
+}
+
 .site-header {
 	top: 0;
 	left: 0;
@@ -234,6 +261,7 @@ body.the-house-menu {
 		padding: 0.4rem 3.2rem;
 		max-width: 47.7rem;
 		transition: ease-in-out background-color 100ms;
+		height: fit-content;
 	}
 	.site-header:hover {
 		background-color: #6B22A6;
@@ -289,7 +317,7 @@ body.the-house-menu {
 
 .site-header .site-title a:focus-visible {
 	outline: 0.4rem solid #5B9547;
-	outline-offset: .2rem;
+	outline-offset: 0.2rem;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
@@ -298,7 +326,7 @@ body.the-house-menu {
 	}
 	.site-header .site-title a:focus-visible span {
 		outline: 0.4rem solid #5B9547;
-		outline-offset: -.2rem;
+		outline-offset: -0.2rem;
 		border-radius: 1.6rem;
 	}
 }
@@ -677,7 +705,7 @@ body.the-house-menu {
 
 @media (min-width: 651px) and (min-height: 500px) {
 	.page article {
-		margin-top: 4.8rem;
+		margin-top: 7.6rem;
 	}
 }
 
@@ -687,9 +715,15 @@ body.the-house-menu {
 }
 
 .page article .post-thumbnail img {
-	aspect-ratio: 4 /3;
+	aspect-ratio: 4/3;
 	object-fit: cover;
 	object-position: top center;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.page article .post-thumbnail img {
+		aspect-ratio: 16/9;
+	}
 }
 
 .page article .entry-inner-container {

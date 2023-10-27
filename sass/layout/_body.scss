@@ -1,20 +1,28 @@
 body {
-    &.the-house-menu {
-        background: local url(./assets/images/the-house-white-svg-72dpi.svg) no-repeat top center;
-        background-position: 50% 14rem;
-        background-size: 120%;
+  &.the-house-menu {
+    background: local url(./assets/images/the-house-white-svg-72dpi.svg)
+      no-repeat top center;
+    background-position: 50% 14rem;
+    background-size: 120%;
 
-        @include tablet {
-            background-position: 52% 2rem;
-            background-size: 78%;
-        }
-
-        @include desktop {
-            background-size: 70%;
-            background-position: 55% 2rem;
-        }
-
-        @include largedesktop {
-        }
+    @include tablet {
+      background-position: 52% 2rem;
+      background-size: 78%;
     }
+
+    @include desktop {
+      background-size: 70%;
+      background-position: 55% 2rem;
+    }
+
+    @include largedesktop {
+    }
+  }
+
+  .site {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }

@@ -6,10 +6,11 @@
   margin-top: $height-mobile-header;
 
   @include tablet {
+    display: flex;
+    flex-wrap: wrap;
     padding: $spacing * 2;
     height: 100vh;
-    width: calc(100vw - 5rem - #{$spacing} * 2 - #{$width-desktop-main-nav} + #{$border-width});
-    margin-left: calc(5rem + #{$spacing} * 2);
+    width: calc(100vw - #{$width-desktop-main-nav} + #{$border-width});
     margin-top: 0;
     padding: $spacing * 2 $spacing * 3 0 $spacing * 2;
   }
