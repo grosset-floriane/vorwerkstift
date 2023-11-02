@@ -15,6 +15,33 @@
       transform: none;
     }
 
+    // replace Instagram icon with filled version
+    &.wp-social-link-instagram {
+      height: 4.8rem;
+      width: 4.8rem;
+      @include desktop {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      svg {
+        content: url(../../../assets/images/instagram-icon.svg);
+        display: none;
+      }
+      a {
+        background: url('/wp-content/themes/vorwerkstift/assets/images/instagram-icon.svg')
+          no-repeat;
+        background-size: 2.6rem;
+        background-position: center;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include desktop {
+          background-size: 2.1rem;
+        }
+      }
+    }
+
     svg {
       fill: $color-purple-main !important;
     }

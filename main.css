@@ -69,8 +69,14 @@ button {
 	font-family: "lackregular", serif;
 }
 
+body {
+	background-attachment: local;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 body.the-house-menu {
-	background: local url(./assets/images/the-house-white-svg-72dpi.svg) no-repeat top center;
+	background-image: url(./assets/images/the-house-white-svg-72dpi.svg);
 	background-position: 50% 14rem;
 	background-size: 120%;
 }
@@ -84,6 +90,66 @@ body.the-house-menu {
 
 @media (min-width: 880px) and (min-height: 500px) {
 	body.the-house-menu {
+		background-size: 70%;
+		background-position: 55% 2rem;
+	}
+}
+
+body.galerie21-menu {
+	background-image: url(./assets/images/gallery-white.svg);
+	background-size: 100%;
+	background-position: 50% 15rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	body.galerie21-menu {
+		background-position: 52% 2rem;
+		background-size: 78%;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	body.galerie21-menu {
+		background-size: 50%;
+		background-position: 65% 2rem;
+	}
+}
+
+body.residencies-menu {
+	background-image: url(./assets/images/residencies-white.svg);
+	background-size: 100%;
+	background-position: 50% 15rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	body.residencies-menu {
+		background-position: 52% 2rem;
+		background-size: 78%;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	body.residencies-menu {
+		background-size: 70%;
+		background-position: 55% 2rem;
+	}
+}
+
+body.contact-menu {
+	background-image: url(./assets/images/contact-white.svg);
+	background-size: 100%;
+	background-position: 50% 15rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	body.contact-menu {
+		background-position: 52% 2rem;
+		background-size: 78%;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	body.contact-menu {
 		background-size: 70%;
 		background-position: 55% 2rem;
 	}
@@ -761,6 +827,38 @@ body.the-house-menu {
 	transform: none;
 }
 
+.wp-block-social-links li.wp-social-link.wp-block-social-link.wp-social-link-instagram {
+	height: 4.8rem;
+	width: 4.8rem;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.wp-block-social-links li.wp-social-link.wp-block-social-link.wp-social-link-instagram {
+		height: 4rem;
+		width: 4rem;
+	}
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link.wp-social-link-instagram svg {
+	content: url(../../../assets/images/instagram-icon.svg);
+	display: none;
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link.wp-social-link-instagram a {
+	background: url("/wp-content/themes/vorwerkstift/assets/images/instagram-icon.svg") no-repeat;
+	background-size: 2.6rem;
+	background-position: center;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.wp-block-social-links li.wp-social-link.wp-block-social-link.wp-social-link-instagram a {
+		background-size: 2.1rem;
+	}
+}
+
 .wp-block-social-links li.wp-social-link.wp-block-social-link svg {
 	fill: #4b107a !important;
 }
@@ -811,6 +909,8 @@ body.the-house-menu {
 	position: relative;
 	padding: 2.4rem 1.6rem 0;
 	margin-top: 0.8rem;
+	min-width: 16rem;
+	align-items: center !important;
 }
 
 .sponsor p {
