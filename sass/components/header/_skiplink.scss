@@ -1,0 +1,17 @@
+.skip-link {
+  &:focus {
+    box-shadow: none;
+    color: $color-black-dark;
+    font-family: $font-headings;
+    font-size: 1.6rem;
+    border-radius: 1.2rem;
+    padding: $spacing * 2 $spacing * 3;
+    left: $spacing * 2;
+    top: calc(#{$height-mobile-header} + #{$spacing * 2});
+
+    @include tablet {
+      top: $spacing * 2;
+      left: $width-medium-desktop-main-nav + $spacing * 2;
+    }
+  }
+}

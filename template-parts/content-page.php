@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post" <?php post_class(); ?>>
 	
 		<?php vorwerkstift_post_thumbnail(); ?>
 		<div class="entry-inner-container">
