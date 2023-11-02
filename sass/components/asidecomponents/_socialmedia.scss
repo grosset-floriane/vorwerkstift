@@ -1,0 +1,61 @@
+.wp-block-social-links {
+  $transition-background: background-color 100ms ease-in-out;
+  gap: $spacing * 2;
+  margin-bottom: 0;
+
+  @include desktop {
+    gap: initial;
+    justify-content: space-between;
+  }
+  li.wp-social-link.wp-block-social-link {
+    background-color: $color-grey-light;
+    transition: $transition-background;
+
+    &:hover {
+      transform: none;
+    }
+
+    svg {
+      fill: $color-purple-main !important;
+    }
+
+    // ICON SIZE
+    a.wp-block-social-link-anchor {
+      padding: 0.9rem;
+
+      @include desktop {
+        padding: 0.6rem;
+      }
+    }
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+
+      @include desktop {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+    }
+
+    // ICON REACTION
+    &:hover {
+      background-color: $color-white-light;
+      transition: $transition-background;
+    }
+
+    a:focus-visible {
+      outline: 0.2rem solid $color-green-dark;
+      border-radius: 50%;
+      outline-offset: -1px;
+    }
+  }
+}
+
+#follow-text {
+  font-family: $font-headings;
+  font-size: 2.4rem;
+  margin: 0;
+  color: $color-purple-main;
+  text-align: center;
+}

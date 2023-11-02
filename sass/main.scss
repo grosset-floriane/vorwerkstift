@@ -19,7 +19,6 @@ Use it to make something cool, have fun, and share what you've learned
 with others.
 */
 
-
 // Helpers
 @import 'helpers/fonts';
 @import 'helpers/parameters';
@@ -32,22 +31,21 @@ with others.
 @import 'layout/aside';
 @import 'layout/scrollbar';
 
-
 // Components
-    // Header
-    @import 'components/header/header';
-    @import 'components/mainnav/mainnav';
-    @import 'components/mainnav/mobileNav';
-    @import 'components/mainnav/languageNav';
-    @import 'components/mainnav/menuToggle';
+// Header
+@import 'components/header/header';
+@import 'components/mainnav/mainnav';
+@import 'components/mainnav/mobileNav';
+@import 'components/mainnav/languageNav';
+@import 'components/mainnav/menuToggle';
 
-    // Main Header
-    @import 'components/mainheader/sectionTitle';
-    @import 'components/mainheader/subNav';
-    //  Textual
-    //  Templates 
-    // Scrollbars
-    // Media
-
+// Main Header
+@import 'components/mainheader/sectionTitle';
+@import 'components/mainheader/subNav';
+//  aside components
+@import 'components/asidecomponents/socialmedia';
+//  Templates
+// Scrollbars
+// Media
 // Pages
-@import 'pages/article'
+@import 'pages/article';

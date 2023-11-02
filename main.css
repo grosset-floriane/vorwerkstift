@@ -698,6 +698,72 @@ body.the-house-menu {
 	}
 }
 
+.wp-block-social-links {
+	gap: 1.6rem;
+	margin-bottom: 0;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.wp-block-social-links {
+		gap: initial;
+		justify-content: space-between;
+	}
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link {
+	background-color: #C0C0C0;
+	transition: background-color 100ms ease-in-out;
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link:hover {
+	transform: none;
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link svg {
+	fill: #4B107A !important;
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link a.wp-block-social-link-anchor {
+	padding: 0.9rem;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.wp-block-social-links li.wp-social-link.wp-block-social-link a.wp-block-social-link-anchor {
+		padding: 0.6rem;
+	}
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link svg {
+	width: 3rem;
+	height: 3rem;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.wp-block-social-links li.wp-social-link.wp-block-social-link svg {
+		width: 2.8rem;
+		height: 2.8rem;
+	}
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link:hover {
+	background-color: #FFFFFF;
+	transition: background-color 100ms ease-in-out;
+}
+
+.wp-block-social-links li.wp-social-link.wp-block-social-link a:focus-visible {
+	outline: 0.2rem solid #5B9547;
+	border-radius: 50%;
+	outline-offset: -1px;
+}
+
+#follow-text {
+	font-family: "lackregular", serif;
+	font-size: 2.4rem;
+	margin: 0;
+	color: #4B107A;
+	text-align: center;
+}
+
 .page article {
 	background-color: #FFFFFF;
 	margin-top: 14rem;
