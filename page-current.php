@@ -1,13 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * The template for displaying the current and aktuell pages
  *
  * @package vorwerkstift
  */
@@ -19,10 +12,12 @@ get_header();
 <div id="main-container">
 
 	<main id="primary" class="site-main">
-	
 			<?php
-			while ( have_posts() ) :
-				the_post();
+			// Get the current exhibition
+			$the_query = vorwerkstift_get_current_exhibition_in_loop();
+
+			while ( $the_query->have_posts() ) :
+				$the_query->the_post();
 		
 				/* Check which section the page belongs to display the  
 				** corresponding title in the current language and 
@@ -30,8 +25,10 @@ get_header();
 				*/
 	
 				// get all the section categories
-				$currentSection = vorwerkstift_get_section_category(null);
-				
+				$currentSection = array( "menuID"=>  "galerie21-menu", "sectionTitle"=> "Galerie21" );
+				// 17 is the ID of the current page, in order to display the Sub navigation properly
+				$currentSection = vorwerkstift_get_section_category(17);
+			
 				if(!empty($currentSection)) {
 					$menuID = $currentSection["menuID"];
 					$sectionTitle = $currentSection["sectionTitle"];
