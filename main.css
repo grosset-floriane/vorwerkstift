@@ -214,7 +214,7 @@ body.contact-menu {
 		position: relative;
 		top: -1.6rem;
 		margin: 1.6rem;
-		margin-bottom: 0.8rem;
+		margin-bottom: -1.6rem;
 		max-width: 16rem;
 	}
 	#sidebar-desktop section {
