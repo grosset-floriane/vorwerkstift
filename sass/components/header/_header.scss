@@ -4,6 +4,10 @@
     flex-direction: column;
     width: 4.8rem;
   }
+
+  @include desktop {
+    width: 0;
+  }
 }
 
 .site-header {
