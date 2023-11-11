@@ -1,9 +1,9 @@
 .page article {
   background-color: $color-white-light;
   margin-top: 14rem;
+  margin-bottom: 0;
   @include tablet {
     margin-top: $spacing * 9.5;
-    margin-bottom: 0;
   }
 
   .post-thumbnail {

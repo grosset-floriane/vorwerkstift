@@ -3,7 +3,7 @@ footer#colophon {
   background-color: $color-purple-main;
   width: 100%;
   padding: $spacing * 3 $spacing * 4 $spacing * 2 $spacing * 2;
-  margin-top: $spacing * 6;
+  margin-top: $spacing * 10;
 
   @include tablet {
     width: calc(100% - #{$width-desktop-main-nav});
@@ -12,6 +12,7 @@ footer#colophon {
     align-items: center;
     justify-content: space-between;
     max-height: 50rem;
+    margin-top: $spacing * 8;
   }
 
   @include desktop {

@@ -70,6 +70,7 @@ button:focus-visible {
 
 a {
 	font-family: "Open sans", sans-serif;
+	word-break: break-word;
 }
 
 button {
@@ -325,7 +326,7 @@ footer#colophon {
 	background-color: #4b107a;
 	width: 100%;
 	padding: 2.4rem 3.2rem 1.6rem 1.6rem;
-	margin-top: 4.8rem;
+	margin-top: 8rem;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
@@ -336,6 +337,7 @@ footer#colophon {
 		align-items: center;
 		justify-content: space-between;
 		max-height: 50rem;
+		margin-top: 6.4rem;
 	}
 }
 
@@ -1096,12 +1098,12 @@ footer#colophon .copyright {
 .page article {
 	background-color: #ffffff;
 	margin-top: 14rem;
+	margin-bottom: 0;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
 	.page article {
 		margin-top: 7.6rem;
-		margin-bottom: 0;
 	}
 }
 
