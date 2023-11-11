@@ -3,6 +3,7 @@
   margin-top: 14rem;
   @include tablet {
     margin-top: $spacing * 9.5;
+    margin-bottom: 0;
   }
 
   .post-thumbnail {

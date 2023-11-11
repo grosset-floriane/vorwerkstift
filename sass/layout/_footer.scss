@@ -1,0 +1,140 @@
+footer#colophon {
+  $width-social-media-block: 8rem;
+  background-color: $color-purple-main;
+  width: 100%;
+  padding: $spacing * 3 $spacing * 4 $spacing * 2 $spacing * 2;
+  margin-top: $spacing * 6;
+
+  @include tablet {
+    width: calc(100% - #{$width-desktop-main-nav});
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 50rem;
+  }
+
+  @include desktop {
+    width: calc(100% - #{$width-large-desktop-main-nav});
+  }
+
+  address {
+    color: $color-white-light;
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    color: $color-white-light;
+  }
+
+  .site-info {
+    @include tablet {
+      width: calc(100% - #{$width-social-media-block});
+    }
+  }
+
+  .site-branding {
+    margin-bottom: $spacing * 5;
+    .site-title {
+      margin: 0;
+      a {
+        font-family: $font-headings;
+        font-size: 2.6rem;
+        color: $color-white-light;
+        text-decoration: none;
+      }
+    }
+
+    .site-description {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+  }
+
+  //   MENU LINKS
+  #footer-menu {
+    margin: 0;
+    margin-bottom: $spacing * 4;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing * 2;
+
+    @include tablet {
+      max-width: 35rem;
+    }
+
+    @include desktop {
+      max-width: 65rem;
+    }
+
+    li {
+      list-style: none;
+
+      a {
+        color: $color-green-main;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // SOCIAL MEDIA
+  #block-15 {
+    @include tablet {
+      width: $width-social-media-block;
+    }
+  }
+  .follow-title {
+    font-family: $font-headings;
+    margin-bottom: $spacing;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .wp-block-social-links {
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include desktop {
+      align-items: flex-start;
+    }
+
+    li.wp-social-link.wp-block-social-link {
+      background-color: $color-purple-main;
+
+      &:hover {
+        background-color: $color-purple-light;
+        svg {
+          fill: $color-yellow-light !important;
+        }
+      }
+
+      svg {
+        fill: $color-white-light !important;
+      }
+
+      &.wp-social-link-instagram {
+        a {
+          background-image: url(/wp-content/themes/vorwerkstift/assets/images/instagram-icon-white.svg);
+        }
+        &:hover {
+          a {
+            background-image: url(/wp-content/themes/vorwerkstift/assets/images/instagram-icon-yellow.svg);
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}

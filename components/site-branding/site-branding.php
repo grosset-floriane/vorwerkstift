@@ -1,4 +1,3 @@
-<div class="site-branding">
   <?php
     /**
    * Site branding
@@ -13,9 +12,8 @@
    * @link       https://vorwerkstift.de
    * @since      1.0.0
    */
-
-    the_custom_logo();
   ?>
+<div class="site-branding">
     <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><span></span></a></p>
     <?php
         $vorwerkstift_description = get_bloginfo( 'description', 'display' );

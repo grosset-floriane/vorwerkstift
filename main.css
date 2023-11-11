@@ -48,15 +48,22 @@ body {
 	line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: "lackregular", serif;
 }
 
-a, button {
+a,
+button {
 	touch-action: manipulation;
 }
 
-a:focus-visible, button:focus-visible {
+a:focus-visible,
+button:focus-visible {
 	outline: 0.4rem solid #5b9547;
 	outline-offset: -0.4rem;
 }
@@ -67,6 +74,10 @@ a {
 
 button {
 	font-family: "lackregular", serif;
+}
+
+address {
+	font-style: normal;
 }
 
 body {
@@ -172,12 +183,13 @@ body.contact-menu {
 
 @media (min-width: 651px) and (min-height: 500px) {
 	.scrollable {
+		margin-top: 0;
+		height: 100vh;
+	}
+	.scrollable .container-padding {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 1.6rem;
-		height: 100vh;
 		width: calc(100vw - 4.9rem + 0.4rem);
-		margin-top: 0;
 		padding: 1.6rem 2.4rem 0 1.6rem;
 	}
 }
@@ -307,6 +319,159 @@ body.contact-menu {
 		border: 0.4rem solid #4b107a;
 		/* creates padding around scroll thumb */
 	}
+}
+
+footer#colophon {
+	background-color: #4b107a;
+	width: 100%;
+	padding: 2.4rem 3.2rem 1.6rem 1.6rem;
+	margin-top: 4.8rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	footer#colophon {
+		width: calc(100% - 4.9rem);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		max-height: 50rem;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	footer#colophon {
+		width: calc(100% - 3.5rem);
+	}
+}
+
+footer#colophon address {
+	color: #ffffff;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	footer#colophon address {
+		margin-bottom: 0;
+	}
+}
+
+footer#colophon p {
+	color: #ffffff;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	footer#colophon .site-info {
+		width: calc(100% - 8rem);
+	}
+}
+
+footer#colophon .site-branding {
+	margin-bottom: 4rem;
+}
+
+footer#colophon .site-branding .site-title {
+	margin: 0;
+}
+
+footer#colophon .site-branding .site-title a {
+	font-family: "lackregular", serif;
+	font-size: 2.6rem;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+footer#colophon .site-branding .site-description {
+	margin: 0;
+	font-size: 1.4rem;
+}
+
+footer#colophon #footer-menu {
+	margin: 0;
+	margin-bottom: 3.2rem;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.6rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	footer#colophon #footer-menu {
+		max-width: 35rem;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	footer#colophon #footer-menu {
+		max-width: 65rem;
+	}
+}
+
+footer#colophon #footer-menu li {
+	list-style: none;
+}
+
+footer#colophon #footer-menu li a {
+	color: #51d52d;
+	text-transform: uppercase;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	footer#colophon #block-15 {
+		width: 8rem;
+	}
+}
+
+footer#colophon .follow-title {
+	font-family: "lackregular", serif;
+	margin-bottom: 0.8rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	footer#colophon .follow-title {
+		display: none;
+	}
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	footer#colophon .wp-block-social-links {
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	footer#colophon .wp-block-social-links {
+		align-items: flex-start;
+	}
+}
+
+footer#colophon .wp-block-social-links li.wp-social-link.wp-block-social-link {
+	background-color: #4b107a;
+}
+
+footer#colophon .wp-block-social-links li.wp-social-link.wp-block-social-link:hover {
+	background-color: #6b22a6;
+}
+
+footer#colophon .wp-block-social-links li.wp-social-link.wp-block-social-link:hover svg {
+	fill: #f2f3c1 !important;
+}
+
+footer#colophon .wp-block-social-links li.wp-social-link.wp-block-social-link svg {
+	fill: #ffffff !important;
+}
+
+footer#colophon .wp-block-social-links li.wp-social-link.wp-block-social-link.wp-social-link-instagram a {
+	background-image: url(/wp-content/themes/vorwerkstift/assets/images/instagram-icon-white.svg);
+}
+
+footer#colophon .wp-block-social-links li.wp-social-link.wp-block-social-link.wp-social-link-instagram:hover a {
+	background-image: url(/wp-content/themes/vorwerkstift/assets/images/instagram-icon-yellow.svg);
+}
+
+footer#colophon .copyright {
+	margin-bottom: 0;
+	font-size: 1.2rem;
+	width: 100%;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
@@ -936,6 +1101,7 @@ body.contact-menu {
 @media (min-width: 651px) and (min-height: 500px) {
 	.page article {
 		margin-top: 7.6rem;
+		margin-bottom: 0;
 	}
 }
 

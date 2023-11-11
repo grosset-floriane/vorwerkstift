@@ -1,46 +1,55 @@
 /*** RESETS ***/
 
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 * {
-    line-height: 1.6;
+  line-height: 1.6;
 }
-
 
 html,
 body {
-margin: 0;
-color: black;
+  margin: 0;
+  color: black;
 
-background-color: transparent;
-font-family: $font-body;
-// line below might hinder sticky positions
-overflow: hidden;
-background-color: $color-grey-light;
-box-sizing: border-box;
-scroll-behavior: smooth;
-font-size: $font-size-base;
-line-height: 1.6;
+  background-color: transparent;
+  font-family: $font-body;
+  // line below might hinder sticky positions
+  overflow: hidden;
+  background-color: $color-grey-light;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: $font-size-base;
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-headings;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-headings;
 }
 
-a, button {
-    touch-action: manipulation;
-    &:focus-visible {
-        outline: $outline-green;
-        outline-offset: -$spacing / 2;
-    }
+a,
+button {
+  touch-action: manipulation;
+  &:focus-visible {
+    outline: $outline-green;
+    outline-offset: -$spacing / 2;
+  }
 }
 
 a {
-    font-family: $font-body;
+  font-family: $font-body;
 }
 
 button {
-    font-family: $font-headings;
+  font-family: $font-headings;
+}
+
+address {
+  font-style: normal;
 }
