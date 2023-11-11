@@ -1095,6 +1095,47 @@ footer#colophon .copyright {
 	max-width: 8rem;
 }
 
+.hero-section {
+	padding: 1.6rem;
+}
+
+.hero-section h1 {
+	margin: 0;
+}
+
+.hero-section .flex-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero-section .flex-container .house-image {
+	margin-top: -1.6rem;
+	width: calc(100% - 2 * 1.6rem);
+}
+
+.hero-section .flex-container p {
+	border-top: 0.2rem solid #ffffff;
+	text-align: center;
+	font-family: "lackregular", serif;
+	font-size: 2.2rem;
+	padding-top: 1.6rem;
+	width: calc(100% - 2 * 1.6rem);
+	color: #4b107a;
+	margin-top: 0;
+}
+
+.hero-section .flex-container p::after {
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 3rem;
+	background: url("/wp-content/themes/vorwerkstift/assets/images/arrow-bottom-white.svg") no-repeat;
+	background-size: contain;
+	background-position: center top;
+	margin-top: 0.8rem;
+}
+
 .page article {
 	background-color: #ffffff;
 	margin-top: 14rem;
