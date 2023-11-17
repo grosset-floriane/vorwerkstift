@@ -1099,13 +1099,31 @@ footer#colophon .copyright {
 	padding: 1.6rem;
 }
 
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section {
+		margin-left: 6.6rem;
+		width: 100%;
+	}
+}
+
 .hero-section h1 {
 	margin: 0;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
 	.hero-section h1 {
-		max-width: 43rem;
+		width: 43rem;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section h1 {
+		width: 100%;
+		position: relative;
+		z-index: 2;
+	}
+	.hero-section h1 img {
+		width: 100%;
 	}
 }
 
@@ -1115,9 +1133,49 @@ footer#colophon .copyright {
 	align-items: center;
 }
 
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section .flex-container {
+		flex-direction: row;
+		gap: 2.4rem;
+		position: relative;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section .flex-container::before, .hero-section .flex-container::after {
+		content: ' ';
+		display: block;
+		width: calc(100% - 1.6rem);
+		height: 80%;
+		margin-top: 2.4rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: 0.4rem solid #ffffff;
+		border-radius: 1.2rem;
+		background-color: #c0c0c0;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section .flex-container::before {
+		top: 1.6rem;
+		left: 1.6rem;
+	}
+}
+
 .hero-section .flex-container .house-image {
 	margin-top: -1.6rem;
 	width: calc(100% - 2 * 1.6rem);
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section .flex-container .house-image {
+		max-width: 50%;
+		margin-top: -7.2rem;
+		position: relative;
+		z-index: 1;
+	}
 }
 
 .hero-section .flex-container p {
@@ -1135,6 +1193,19 @@ footer#colophon .copyright {
 	.hero-section .flex-container p {
 		max-width: 30rem;
 		text-align: left;
+		font-size: 2.4rem;
+	}
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section .flex-container p {
+		border-top: none;
+		border-left: 0.4rem solid #ffffff;
+		padding: 1.6rem 2.4rem;
+		font-size: 3.2rem;
+		max-width: 51rem;
+		position: relative;
+		z-index: 1;
 	}
 }
 
@@ -1147,6 +1218,12 @@ footer#colophon .copyright {
 	background-size: contain;
 	background-position: center top;
 	margin-top: 0.8rem;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section .flex-container p::after {
+		display: none;
+	}
 }
 
 .page article {

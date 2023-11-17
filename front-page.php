@@ -17,11 +17,7 @@ get_header();
 <div class="scrollable">
 	<div class="container-padding">
 	<?php require('site-header.php'); ?>
-	<div id="main-container">
-
-		<main id="primary" class="site-main">
-
-        <?php 
+	<?php 
             $activeLang = pll_current_language();
             if ($activeLang === "en") {
                 $postID = 197;
@@ -30,7 +26,7 @@ get_header();
             }
 
         ?>
-        <section class="hero-section">
+        <main class="hero-section">
             <h1 class="landing-title"><img src="/wp-content/themes/vorwerkstift/assets/images/title-landing.svg" alt="Vorwerk-Stift" /></h1>
             <div class="flex-container">
                 <img src="/wp-content/themes/vorwerkstift/assets/images/img-landing-page.png" alt="" class="house-image"/>
@@ -44,8 +40,13 @@ get_header();
             <?php endif; ?>
             </div>
             
-        </section>
-		</main><!-- #main -->
+        </main>
+	<div id="main-container">
+
+		<div id="primary" class="site-main">
+				<p>Here cards</p>
+        
+		</div><!-- #main -->
 	
 		<aside id="sidebar-desktop" class="widget-area">
 			<?php dynamic_sidebar( 'sidebar-desktop' ); ?>
