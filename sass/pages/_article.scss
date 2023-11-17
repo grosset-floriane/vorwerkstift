@@ -1,6 +1,7 @@
 .page article {
   background-color: $color-white-light;
   margin-top: 14rem;
+  margin-bottom: 0;
   @include tablet {
     margin-top: $spacing * 9.5;
   }
