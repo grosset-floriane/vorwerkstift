@@ -1103,6 +1103,12 @@ footer#colophon .copyright {
 	margin: 0;
 }
 
+@media (min-width: 651px) and (min-height: 500px) {
+	.hero-section h1 {
+		max-width: 43rem;
+	}
+}
+
 .hero-section .flex-container {
 	display: flex;
 	flex-direction: column;
@@ -1123,6 +1129,13 @@ footer#colophon .copyright {
 	width: calc(100% - 2 * 1.6rem);
 	color: #4b107a;
 	margin-top: 0;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.hero-section .flex-container p {
+		max-width: 30rem;
+		text-align: left;
+	}
 }
 
 .hero-section .flex-container p::after {

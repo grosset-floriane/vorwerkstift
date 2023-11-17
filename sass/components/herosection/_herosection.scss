@@ -3,6 +3,10 @@
 
   h1 {
     margin: 0;
+
+    @include tablet {
+      max-width: 43rem;
+    }
   }
 
   .flex-container {
@@ -24,6 +28,11 @@
       width: calc(100% - 2 * #{$spacing * 2});
       color: $color-purple-main;
       margin-top: 0;
+
+      @include tablet {
+        max-width: 30rem;
+        text-align: left;
+      }
 
       &::after {
         content: ' ';
