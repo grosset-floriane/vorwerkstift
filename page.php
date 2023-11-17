@@ -15,10 +15,11 @@
 get_header();
 ?>
 <div class="scrollable">
-<?php require('site-header.php'); ?>
-<div id="main-container">
+	<div class="container-padding">
+	<?php require('site-header.php'); ?>
+	<div id="main-container">
 
-	<main id="primary" class="site-main">
+		<main id="primary" class="site-main">
 	
 			<?php
 			while ( have_posts() ) :
@@ -30,7 +31,8 @@ get_header();
 				*/
 	
 				// get all the section categories
-				$currentSection = vorwerkstift_get_section_category();
+				$currentSection = vorwerkstift_get_section_category(null);
+				
 				if(!empty($currentSection)) {
 					$menuID = $currentSection["menuID"];
 					$sectionTitle = $currentSection["sectionTitle"];
@@ -65,9 +67,11 @@ get_header();
 		<aside id="sidebar-desktop" class="widget-area">
 			<?php dynamic_sidebar( 'sidebar-desktop' ); ?>
 		</aside>
-</div>
-<?php
-get_footer();
+	</div><!-- #main-container -->
+	</div><!-- .container-padding -->
+	
+	<?php
+	get_footer();
 
-?>
-</div>
+	?>
+</div> <!-- .scrollable -->

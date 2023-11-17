@@ -13,6 +13,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
+		<?php include 'components/site-branding/site-branding.php'; ?>
 		<?php
 			wp_nav_menu(
 				array(
@@ -21,18 +22,16 @@
 				)
 			);
 			?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'vorwerkstift' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'vorwerkstift' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'vorwerkstift' ), 'vorwerkstift', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+		<address>
+			Vorwerk-Stift | Galerie 21<br />
+			Vorwerkstrasse 21<br />
+			20357 Hamburg<br />
+			Germany
+		</address>
 		</div><!-- .site-info -->
+		<?php dynamic_sidebar( 'footer-widget' ); ?>
+
+		<p class="copyright">©<?php echo  date("Y"); ?> Vorwerk-Stift All Rights Reserved</p>
 	</footer><!-- #colophon -->
 	</div><!-- #page -->
 
