@@ -11,43 +11,50 @@
  *
  * @package vorwerkstift
  */
+if (pll_current_language() === "en") {
+	$postID = 197;
+} else {
+	$postID = 199;
+}
 
 get_header();
 ?>
-<div class="scrollable">
+<div class="scrollable front-page">
 	<div class="container-padding">
 	<?php require('site-header.php'); ?>
-	<?php 
-            $activeLang = pll_current_language();
-            if ($activeLang === "en") {
-                $postID = 197;
-            } else {
-                $postID = 199;
-            }
-
-        ?>
-        <main class="hero-section">
-            <h1 class="landing-title"><img src="/wp-content/themes/vorwerkstift/assets/images/title-landing.svg" alt="Vorwerk-Stift" /></h1>
-            <div class="flex-container">
-                <img src="/wp-content/themes/vorwerkstift/assets/images/img-landing-page.png" alt="" class="house-image"/>
-            
-            <?php if( get_field('hero_text', $postID) ): ?>
-                <p><?php the_field('hero_text', $postID); ?></p>
-                <?php elseif ($activeLang === "en"): ?>
-                <p>an everchanging community fostering independent artistic creation since 1990.</p>
-                <?php else: ?>
-                <p>eine sich ständig verändernde Gemeinschaft, die seit 1990 unabhängiges künstlerisches Schaffen fördert.</p>
-            <?php endif; ?>
-            </div>
-            
-        </main>
+	<main class="hero-section" id="hero-section">
+		<h1 class="landing-title"><img src="/wp-content/themes/vorwerkstift/assets/images/title-landing.svg" alt="Vorwerk-Stift" /></h1>
+		<div class="flex-container">
+			<img src="/wp-content/themes/vorwerkstift/assets/images/img-landing-page.png" alt="" class="house-image"/>
+		<?php if( get_field('hero_text', $postID) ): ?>
+			<p><?php the_field('hero_text', $postID); ?></p>
+			<?php else: ?>
+			<p><?php pll_e( 'an everchanging community fostering independent artistic creation since 1990.' ); ?></p>
+		<?php endif; ?>
+		</div>	
+	</main>
 	<div id="main-container">
-
+		<div class="sliding-container">
+			<aside id="sidebar-tablet" class="widget-area">
+			<div class="container">
+				<?php dynamic_sidebar( 'sidebar-tablet' ); ?>
+			</div>
+		</aside>
+		</div>
 		<div id="primary" class="site-main">
-				<p>Here cards</p>
+				<?php 
+				$the_query = vorwerkstift_get_current_exhibition_in_loop();
+
+				while ( $the_query->have_posts() ) :
+					$the_query->the_post();
+
+					get_template_part( 'template-parts/content', 'card' );
+		
+				endwhile; // End of the loop.
+
+				?>
         
 		</div><!-- #main -->
-	
 		<aside id="sidebar-desktop" class="widget-area">
 			<?php dynamic_sidebar( 'sidebar-desktop' ); ?>
 		</aside>

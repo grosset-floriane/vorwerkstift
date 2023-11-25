@@ -6,17 +6,16 @@
   overflow-y: auto;
   padding-bottom: $spacing * 2;
 
-
   @include tablet {
     display: none;
   }
 
   &.toggled {
     display: block;
-
   }
- 
-  ul, li {
+
+  ul,
+  li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -39,20 +38,18 @@
 
   & > div > ul > li {
     background-color: $color-white-light;
-    
+
     width: 100%;
-    
+
     display: block;
     margin-top: $spacing * 2;
-    font-size: 2.4rem;
+    font-size: $font-size-medium;
 
     a {
       color: $color-black-dark;
       text-align: center;
       display: block;
       padding: $spacing * 2;
-
-     
     }
   }
 
@@ -62,7 +59,7 @@
     background-color: $color-green-main;
     > a::after {
       background-image: url('/wp-content/themes/vorwerkstift/assets/images/arrow-top-purple.svg');
-    } 
+    }
 
     a {
       color: $color-purple-main;
@@ -79,15 +76,16 @@
       position: relative;
 
       &.focus {
-        ~ ul  {
+        ~ ul {
           display: block;
         }
       }
-  
+
       /* Arrow */
       &::after {
         content: ' ';
-        background: url('/wp-content/themes/vorwerkstift/assets/images/arrow-top-black.svg') center center;
+        background: url('/wp-content/themes/vorwerkstift/assets/images/arrow-top-black.svg')
+          center center;
         width: 4.8rem;
         height: 100%;
         display: block;
@@ -100,29 +98,28 @@
       }
 
       &.focus::after {
-          transform: rotate(0deg);
+        transform: rotate(0deg);
       }
     }
 
-    
     > ul {
       display: none;
-      padding: .8rem 1.6rem 1.6rem;
+      padding: $spacing $spacing * 2 $spacing * 2;
 
       a:not([lang]) {
-        font-size: 1.4rem;
+        font-size: $font-size-small;
         border-radius: $spacing * 2;
         padding: $spacing / 2;
         margin-bottom: $spacing * 1.5;
         text-transform: uppercase;
 
-        &[aria-current="page"] {
+        &[aria-current='page'] {
           background-color: $color-white-light;
         }
       }
 
       li:last-child a {
-          margin-bottom: 0;
+        margin-bottom: 0;
       }
     }
   }

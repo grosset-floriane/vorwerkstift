@@ -17,6 +17,7 @@ $border-width: $spacing / 2;
 $outline-green: $border-width solid $color-green-dark;
 $outline-purple: $border-width solid $color-purple-main;
 $border-purple: $border-width solid $color-purple-main;
+$border-radius: 1.2rem;
 
 // Font Family
 $font-body: 'Open sans', sans-serif;
@@ -24,6 +25,7 @@ $font-headings: 'lackregular', serif;
 
 // Font Size
 
+$font-size-small: 1.4rem;
 $font-size-base: 1.6rem;
 $font-size-medium: 2.4rem;
 $font-size-large: 3.2rem;

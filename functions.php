@@ -171,6 +171,7 @@ function vorwerkstift_scripts() {
 	wp_style_add_data( 'vorwerkstift-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'vorwerkstift-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'vorwerkstift-styles', get_template_directory_uri() . '/js/styles.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -204,4 +205,10 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Translations
+ */
+
+require get_template_directory() . '/inc/template-translations.php';
 

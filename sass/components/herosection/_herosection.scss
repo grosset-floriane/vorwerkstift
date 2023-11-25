@@ -46,7 +46,7 @@
         top: 0;
         left: 0;
         border: 0.4rem solid $color-white-light;
-        border-radius: 1.2rem;
+        border-radius: $border-radius;
         background-color: $color-grey-light;
       }
     }
@@ -83,14 +83,14 @@
       @include tablet {
         max-width: 30rem;
         text-align: left;
-        font-size: 2.4rem;
+        font-size: $font-size-medium;
       }
 
       @include desktop {
         border-top: none;
         border-left: 0.4rem solid $color-white-light;
         padding: $spacing * 2 $spacing * 3;
-        font-size: 3.2rem;
+        font-size: $font-size-large;
         max-width: 51rem;
         position: relative;
         z-index: 1;
