@@ -106,6 +106,16 @@
       text-decoration: none;
       display: block;
       width: fit-content;
+
+      &:hover {
+        background-color: $color-green-light;
+        color: $color-purple-light;
+      }
+
+      &:focus-visible {
+        outline: $outline-green solid $color-green-dark;
+        outline-offset: 3px;
+      }
     }
   }
 

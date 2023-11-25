@@ -1368,6 +1368,16 @@ footer#colophon .copyright {
 	width: fit-content;
 }
 
+.page article.card .card-content .card-cta:hover {
+	background-color: #bbe8af;
+	color: #6b22a6;
+}
+
+.page article.card .card-content .card-cta:focus-visible {
+	outline: 0.4rem solid #5b9547 solid #5b9547;
+	outline-offset: 3px;
+}
+
 .page article.card .entry-footer a {
 	color: #ffffff;
 }
