@@ -9,7 +9,7 @@
   @include desktop {
     width: 100%;
     display: flex;
-    margin-left: 5rem + $spacing * 2;
+    margin-left: $width-title-tablet-desktop + $spacing * 2;
     #primary {
       width: 75%;
     }
