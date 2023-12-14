@@ -4,6 +4,7 @@
   @include desktop {
     margin-left: $width-title-tablet-desktop + $spacing * 2;
     width: 100%;
+    max-width: 120rem;
   }
 
   h1 {
@@ -108,7 +109,11 @@
         margin-top: $spacing;
 
         @include desktop {
-          display: none;
+          background-position: left top;
+          height: 5rem;
+          background: url('/wp-content/themes/vorwerkstift/assets/images/arrow-bottom-purple.svg')
+            no-repeat;
+          background-size: contain;
         }
       }
     }

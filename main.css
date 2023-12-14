@@ -1126,6 +1126,7 @@ footer#colophon .copyright {
 	.hero-section {
 		margin-left: 6.6rem;
 		width: 100%;
+		max-width: 120rem;
 	}
 }
 
@@ -1245,7 +1246,10 @@ footer#colophon .copyright {
 
 @media (min-width: 880px) and (min-height: 500px) {
 	.hero-section .flex-container p::after {
-		display: none;
+		background-position: left top;
+		height: 5rem;
+		background: url("/wp-content/themes/vorwerkstift/assets/images/arrow-bottom-purple.svg") no-repeat;
+		background-size: contain;
 	}
 }
 
