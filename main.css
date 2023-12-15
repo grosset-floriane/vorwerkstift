@@ -475,6 +475,7 @@ footer#colophon .follow-title {
 @media (min-width: 651px) and (min-height: 500px) {
 	footer#colophon .wp-block-social-links {
 		flex-direction: column;
+		gap: 1.6rem;
 	}
 }
 

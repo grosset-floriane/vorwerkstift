@@ -137,6 +137,7 @@ footer#colophon {
   .wp-block-social-links {
     @include tablet {
       flex-direction: column;
+      gap: $spacing * 2;
     }
 
     @include desktop {
