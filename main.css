@@ -1307,6 +1307,7 @@ footer#colophon .copyright {
 @media (min-width: 651px) and (min-height: 500px) {
 	.page article.card .entry-inner-container {
 		padding-bottom: 4.8rem;
+		padding-left: 4.8rem;
 	}
 }
 
@@ -1391,7 +1392,7 @@ footer#colophon .copyright {
 }
 
 .page article.card .card-content p {
-	margin-bottom: 3.2rem;
+	margin-bottom: 2.8rem;
 	font-size: 1.6rem;
 }
 
