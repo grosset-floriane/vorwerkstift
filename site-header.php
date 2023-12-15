@@ -5,11 +5,13 @@
         <?php include 'components/mobile-nav/mobile-nav.php'; ?>
 
     </header><!-- #masthead -->
+    <?php if (!is_front_page()) { ?>
     <aside id="sidebar-tablet" class="widget-area">
         <div class="container">
             <?php dynamic_sidebar( 'sidebar-tablet' ); ?>
         </div>
     </aside>
+    <?php } ?>
 </div>
 
 <!-- Main navigation -->

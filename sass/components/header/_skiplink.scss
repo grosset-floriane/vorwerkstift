@@ -3,8 +3,8 @@
     box-shadow: none;
     color: $color-black-dark;
     font-family: $font-headings;
-    font-size: 1.6rem;
-    border-radius: 1.2rem;
+    font-size: $font-size-base;
+    border-radius: $border-radius;
     padding: $spacing * 2 $spacing * 3;
     left: $spacing * 2;
     top: calc(#{$height-mobile-header} + #{$spacing * 2});

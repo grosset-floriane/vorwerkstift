@@ -1,4 +1,5 @@
-.main-navigation, .mobile-navigation {
+.main-navigation,
+.mobile-navigation {
   > div > ul > li:first-child {
     padding: 0;
     background-color: transparent;
@@ -6,7 +7,7 @@
     @include tablet {
       max-height: 4.4rem;
       max-width: 4.9rem;
-    } 
+    }
 
     @include portrait {
       max-height: 4.4rem * 2;
@@ -14,7 +15,7 @@
 
     & > a {
       display: none;
-    } 
+    }
 
     ul {
       display: flex;
@@ -34,8 +35,8 @@
       li.lang-item {
         a {
           writing-mode: horizontal-tb;
-         font-size: 1.4rem;
-          padding: $spacing * 2;
+          font-size: $font-size-small;
+          padding: 0;
           width: 4.4rem;
           height: 4.4rem;
           display: flex;

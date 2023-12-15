@@ -24,6 +24,9 @@ with others.
 @import 'helpers/parameters';
 @import 'helpers/layoutMixins';
 @import 'helpers/resets';
+
+// Mixins
+@import 'components/mixins/buttons';
 // Layout
 @import 'layout/body';
 @import 'layout/scrollable';
@@ -50,9 +53,11 @@ with others.
 
 // Hero section
 @import 'components/herosection/herosection';
+@import 'components/card/card';
 
 //  Templates
 // Scrollbars
 // Media
 // Pages
 @import 'pages/article';
+@import 'pages/frontpage';

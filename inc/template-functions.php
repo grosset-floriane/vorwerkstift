@@ -81,7 +81,14 @@ add_action( 'wp_head', 'vorwerkstift_pingback_header' );
 function vorwerkstift_get_current_exhibition_in_loop() {
 	// Get the id of the article to display
 			// if override: show override  
-	$overridePostID = get_field('exhibition_or_event_override');
+	$aktuellID = 11;
+	$currentID = 17;
+	if (pll_current_language() === "en") {
+		$postID = $currentID;
+	} else {
+		$postID = $aktuellID;
+	}
+	$overridePostID = get_field('exhibition_or_event_override', $postID);
 
 	$args = array();
 
@@ -172,4 +179,104 @@ function vorwerkstift_get_current_exhibition_in_loop() {
 	}
 
 	return $the_query;
+}
+
+/**
+ * Format the whole event period 
+ *
+ * @return string $period: d.m.y || d. - d.m.y || d.m. - d.m.y || d.m.y - d.m.y
+ */
+
+function formatEventPeriod() {
+	$startDate = get_field('start_date');
+	$endDate = get_field('end_date');
+
+	$period = date("d.m.y",strtotime($endDate));
+
+	$sameYear = date("Y",strtotime($startDate)) === date("Y",strtotime($endDate));
+	$sameMonth = date("m",strtotime($startDate)) === date("m",strtotime($endDate));
+	$sameDay = date("d",strtotime($startDate)) === date("d",strtotime($endDate));
+
+	if(!$sameYear) {
+		$period = date("d.m.y",strtotime($startDate)) . " - " . $period;
+	} else if (!$sameMonth) {
+		$period = date("d.m.",strtotime($startDate)) . " - " . $period;
+	} else if (!$sameDay) {
+		$period = date("d.",strtotime($startDate)) . " - " . $period;
+	}
+
+	return $period;
+}
+
+/**
+ * Format opened hours
+ *
+ * @return string $openingAndOpeningHours
+ */
+
+function formatOpenedHours() {
+	$openingStartTime = get_field('opening_start_time');
+	$openingHours = get_cfc_meta( 'regular_days_open_dates_hours' );
+	if (pll_current_language() === 'de') {
+		// To format day names to German
+		setlocale(LC_ALL, 'de_DE@euro', 'de_DE', 'de', 'ge');
+	}
+
+	$openingAndOpeningHours = '';
+	if($openingStartTime) {
+		$openingAndOpeningHours = 'Opening ' . strftime("%A: ", strtotime($openingStartTime)) . date("G:i",strtotime($openingStartTime)) ;
+	} 
+
+	foreach($openingHours as $key => $value) {
+		$date = get_cfc_field('regular_days_open_dates_hours', 'date', false, $key);
+		$startTime = get_cfc_field('regular_days_open_dates_hours', 'start-open-time', false, $key);
+		$endTime = get_cfc_field('regular_days_open_dates_hours', 'end-open-time', false, $key);
+		$openingAndOpeningHours .= ' | ' . strftime("%A", strtotime($date)) . ': ' . $startTime . ' - ' . $endTime;
+	}
+
+	if(!$openingStartTime) {
+		$openingAndOpeningHours = ltrim(' | ', $openingAndOpeningHours);
+	}
+
+	return $openingAndOpeningHours;
+}
+
+/**
+ * Format Entrance fee
+ *
+ * @return string $entranceFeesLine
+ */
+
+function formatEntranceFee() {
+	$entranceFeesLine = '';
+	$isEntranceFee = get_field('is_free_entrance');
+	if ($isEntranceFee === 'free_entrance') {
+		$entranceFeesLine = pll__( 'Free entrance' );
+	} else if ($isEntranceFee === 'donation_based') {
+		$entranceFeesLine = pll__( 'Donation based' );
+		
+		if(get_field('minimum_recommendation')) {
+			$entranceFeesLine .= ': ' . pll__( 'recommendation from' ) . ' ' . get_field('minimum_recommendation') . '€';
+			if(get_field('maximum_recommendation')) {
+				$entranceFeesLine .= ' ' . pll__( 'to' ) . ' ' . get_field('maximum_recommendation') . '€';
+			}
+		}
+	} else {
+		$entranceFeesLine .= pll__( 'Entrance fee' ) . ': ' . str_replace(".",",", get_field('entrance_fee')) . '€';
+	}
+
+	return $entranceFeesLine;
+}
+
+/**
+ * Get current/aktuell link
+ *
+ * @return string $currentURL
+ */
+
+function getCurrentUrl() {
+	if (pll_current_language() === "en") {
+		return '/en/current';
+	}
+	return '/de/aktuell';
 }
