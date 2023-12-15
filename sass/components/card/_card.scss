@@ -63,7 +63,7 @@
 
   h3 {
     font-size: $font-size-small;
-    margin: $spacing * 2 0 $spacing / 2;
+    margin: $spacing * 3 0 $spacing / 2;
     text-transform: uppercase;
   }
 
@@ -75,7 +75,6 @@
   .period {
     margin: $spacing 0 $spacing / 2;
     font-size: $font-size-small;
-    text-decoration: underline;
   }
 
   .opening-hours {

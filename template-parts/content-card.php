@@ -15,6 +15,7 @@
 	<div class="entry-inner-container">
 		<header class="entry-header">
 			<p class="card-category"><?php pll_e( 'Upcoming event' ); ?></p>
+			<p class="period"><?php echo formatEventPeriod(); ?></p>
 			<?php the_title( '<h2 class="event-title">', '</h2>' ); ?>
 
 			<?php if(get_field('artists_names')) { ?>
@@ -22,7 +23,7 @@
 				<?php the_field('artists_names'); ?>
 			</p>
 			<?php } ?> <!-- end if artists -->
-			<p class="period"><?php echo formatEventPeriod(); ?></p>
+			
 			<h3><?php pll_e( 'Opening hours' ); ?>:</h3>
 			<p class="opening-hours">
 				<?php echo formatOpenedHours(); ?>

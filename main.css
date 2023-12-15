@@ -1327,7 +1327,7 @@ footer#colophon .copyright {
 
 .page article.card h3 {
 	font-size: 1.4rem;
-	margin: 1.6rem 0 0.4rem;
+	margin: 2.4rem 0 0.4rem;
 	text-transform: uppercase;
 }
 
@@ -1339,7 +1339,6 @@ footer#colophon .copyright {
 .page article.card .period {
 	margin: 0.8rem 0 0.4rem;
 	font-size: 1.4rem;
-	text-decoration: underline;
 }
 
 .page article.card .opening-hours {
