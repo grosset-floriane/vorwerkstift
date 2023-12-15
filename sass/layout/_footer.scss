@@ -62,7 +62,7 @@ footer#colophon {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: $spacing * 2;
+    gap: $spacing $spacing * 2;
 
     @include tablet {
       max-width: 35rem;
@@ -74,10 +74,47 @@ footer#colophon {
 
     li {
       list-style: none;
+      position: relative;
 
       a {
         color: $color-green-main;
         text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: inline-block;
+
+        &:hover,
+        &:focus-visible {
+          color: $color-green-light;
+          text-decoration: none;
+        }
+
+        &:focus-visible {
+          outline-width: 0.2rem;
+          outline-offset: 0.1rem;
+        }
+      }
+
+      &::after {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        background-color: transparent;
+        z-index: 0;
+        transition: background-color 100ms ease-in-out;
+      }
+
+      &:hover,
+      &:focus-visible {
+        &::after {
+          background-color: $color-purple-light;
+          transition: background-color 100ms ease-in-out;
+        }
       }
     }
   }
