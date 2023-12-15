@@ -1,5 +1,5 @@
 (function () {
-    // Styles adjustments for the social media aside on desktop
+  // Styles adjustments for the social media aside on desktop
   const heroSection = document.getElementById("hero-section");
   if (heroSection) {
     const stickyElementDesktop = document.getElementById("block-13");
@@ -15,5 +15,12 @@
         heightOfScreen - heightStickyElement - 8 * 2
       }px`;
     }
+
+    // Scroll button
+    const button = document.getElementById("scroll-button");
+    button.addEventListener("click", function () {
+      const currentCard = document.getElementById("primary");
+      currentCard.scrollIntoView({ block: "nearest", inline: "nearest" });
+    });
   }
 })();

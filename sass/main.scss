@@ -24,6 +24,9 @@ with others.
 @import 'helpers/parameters';
 @import 'helpers/layoutMixins';
 @import 'helpers/resets';
+
+// Mixins
+@import 'components/mixins/buttons';
 // Layout
 @import 'layout/body';
 @import 'layout/scrollable';

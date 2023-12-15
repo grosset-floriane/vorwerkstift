@@ -1,0 +1,23 @@
+$transition-background: background-color 100ms ease-in-out;
+
+@mixin roundButtons {
+  border-radius: 50%;
+  background-color: $color-grey-light;
+  transition: $transition-background;
+  border: none;
+
+  &:hover {
+    background-color: $color-white-light;
+    transition: $transition-background;
+  }
+
+  &:focus-visible {
+    outline: 0.2rem solid $color-green-dark;
+    border-radius: 50%;
+    outline-offset: -1px;
+  }
+}
+
+@mixin socialMediaButtons {
+  @include roundButtons;
+}

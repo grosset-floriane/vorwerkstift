@@ -76,6 +76,10 @@ a {
 
 button {
 	font-family: "lackregular", serif;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	cursor: pointer;
 }
 
 address {
@@ -912,14 +916,14 @@ footer#colophon .copyright {
 	border: none;
 	color: #ffffff;
 	font-size: 1.4rem;
-	margin-right: -1.6rem;
 	font-family: "Open sans", sans-serif;
 	display: block;
+	width: 4rem;
 }
 
 .menu-toggle.toggled {
 	background: url("/wp-content/themes/vorwerkstift/assets/images/cross.svg") no-repeat center;
-	margin-right: 0;
+	margin-right: -0.8rem;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
@@ -1202,6 +1206,19 @@ footer#colophon .copyright {
 	}
 }
 
+.hero-section .flex-container .text-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: 880px) and (min-height: 500px) {
+	.hero-section .flex-container .text-block {
+		align-items: flex-start;
+		z-index: 1;
+	}
+}
+
 .hero-section .flex-container p {
 	border-top: 0.2rem solid #ffffff;
 	text-align: center;
@@ -1211,6 +1228,7 @@ footer#colophon .copyright {
 	width: calc(100% - 2 * 1.6rem);
 	color: #4b107a;
 	margin-top: 0;
+	margin-bottom: 1.6rem;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
@@ -1229,27 +1247,44 @@ footer#colophon .copyright {
 		font-size: 3.2rem;
 		max-width: 51rem;
 		position: relative;
-		z-index: 1;
 	}
 }
 
-.hero-section .flex-container p::after {
-	content: ' ';
+.hero-section .flex-container .hero-arrow {
+	border-radius: 50%;
+	background-color: #c0c0c0;
+	transition: background-color 100ms ease-in-out;
+	border: none;
+	width: 4rem;
 	display: block;
-	width: 100%;
-	height: 3rem;
-	background: url("/wp-content/themes/vorwerkstift/assets/images/arrow-bottom-white.svg") no-repeat;
-	background-size: contain;
-	background-position: center top;
-	margin-top: 0.8rem;
+	height: 4rem;
+	background: url("/wp-content/themes/vorwerkstift/assets/images/arrow-bottom-purple.svg") no-repeat;
+	background-position: center 70%;
+	background-size: 3rem;
+	border-radius: 50%;
+	margin-bottom: 0.8rem;
+	z-index: 1;
+}
+
+.hero-section .flex-container .hero-arrow:hover {
+	background-color: #ffffff;
+	transition: background-color 100ms ease-in-out;
+}
+
+.hero-section .flex-container .hero-arrow:focus-visible {
+	outline: 0.2rem solid #5b9547;
+	border-radius: 50%;
+	outline-offset: -1px;
 }
 
 @media (min-width: 880px) and (min-height: 500px) {
-	.hero-section .flex-container p::after {
+	.hero-section .flex-container .hero-arrow {
 		background-position: left top;
 		height: 5rem;
-		background: url("/wp-content/themes/vorwerkstift/assets/images/arrow-bottom-purple.svg") no-repeat;
-		background-size: contain;
+		width: 5rem;
+		background-size: 4rem;
+		background-position: center 70%;
+		margin-left: 2.4rem;
 	}
 }
 

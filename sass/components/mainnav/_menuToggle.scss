@@ -3,14 +3,14 @@
   border: none;
   color: $color-white-light;
   font-size: $font-size-small;
-  margin-right: -$spacing * 2;
   font-family: $font-body;
   display: block;
+  width: 4rem;
 
   &.toggled {
     background: url('/wp-content/themes/vorwerkstift/assets/images/cross.svg')
       no-repeat center;
-    margin-right: 0;
+    margin-right: -$spacing;
   }
 
   @include tablet {

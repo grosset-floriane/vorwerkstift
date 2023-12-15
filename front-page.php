@@ -26,11 +26,15 @@ get_header();
 		<h1 class="landing-title"><img src="/wp-content/themes/vorwerkstift/assets/images/title-landing.svg" alt="Vorwerk-Stift" /></h1>
 		<div class="flex-container">
 			<img src="/wp-content/themes/vorwerkstift/assets/images/img-landing-page.png" alt="" class="house-image"/>
-		<?php if( get_field('hero_text', $postID) ): ?>
+			<div class="text-block">
+				<?php if( get_field('hero_text', $postID) ): ?>
 			<p><?php the_field('hero_text', $postID); ?></p>
 			<?php else: ?>
 			<p><?php pll_e( 'an everchanging community fostering independent artistic creation since 1990.' ); ?></p>
 		<?php endif; ?>
+		<button id="scroll-button" aria-label="scroll down to main content" class="hero-arrow"></button>
+			</div>
+		
 		</div>	
 	</main>
 	<div id="main-container">

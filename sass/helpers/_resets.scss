@@ -50,6 +50,10 @@ a {
 
 button {
   font-family: $font-headings;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 address {
