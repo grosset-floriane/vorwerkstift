@@ -1483,6 +1483,22 @@ footer#colophon .copyright {
 	max-width: 54.4rem;
 }
 
+.page article a {
+	color: #6b22a6;
+	position: relative;
+	z-index: 2;
+}
+
+.page article a:hover, .page article a:focus-visible {
+	text-decoration: none;
+	background-color: #f2f3c1;
+}
+
+.page article a:focus-visible {
+	outline-width: 0.2rem;
+	outline-offset: 0;
+}
+
 @media (min-width: 651px) and (min-height: 500px) {
 	.front-page #main-container {
 		display: flex;

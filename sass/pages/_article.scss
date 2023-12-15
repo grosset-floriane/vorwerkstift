@@ -48,4 +48,21 @@
   p {
     max-width: 54.4rem;
   }
+
+  a {
+    color: $color-purple-light;
+    position: relative;
+    z-index: 2;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: none;
+      background-color: $color-yellow-light;
+    }
+
+    &:focus-visible {
+      outline-width: 0.2rem;
+      outline-offset: 0;
+    }
+  }
 }
