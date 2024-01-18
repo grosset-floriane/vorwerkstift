@@ -119,7 +119,7 @@ if ( ! function_exists( 'vorwerkstift_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function vorwerkstift_post_thumbnail() {
+	function vorwerkstift_post_thumbnail($isCardContent) {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
@@ -128,6 +128,11 @@ if ( ! function_exists( 'vorwerkstift_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
+				<?php if($isCardContent) {
+					?> 
+					<p class="card-category"><?php pll_e( 'Upcoming event' ); ?></p>
+					<?php
+				}?>
 				<?php the_post_thumbnail(); ?>
 			</div><!-- .post-thumbnail -->
 
