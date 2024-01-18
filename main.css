@@ -194,7 +194,7 @@ body.contact-menu {
 	}
 	.scrollable .container-padding {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 		width: calc(100vw - 4.9rem + 0.4rem);
 		padding: 1.6rem 2.4rem 0 1.6rem;
 	}
