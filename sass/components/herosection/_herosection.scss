@@ -1,6 +1,10 @@
 .hero-section {
   padding: $spacing * 2;
 
+  @include tablet {
+    margin-left: $width-title-tablet-desktop;
+  }
+
   @include desktop {
     margin-left: $width-title-tablet-desktop + $spacing * 2;
     width: 100%;

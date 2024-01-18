@@ -214,9 +214,16 @@ body.privacy-policy {
 	}
 	.scrollable .container-padding {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		width: calc(100vw - 4.9rem + 0.4rem);
 		padding: 1.6rem 2.4rem 0 1.6rem;
+	}
+}
+
+@media (min-width: 651px) and (min-height: 500px) and (min-width: 880px) and (min-height: 500px) {
+	.scrollable .container-padding {
+		flex-direction: column;
+		flex-wrap: nowrap;
 	}
 }
 
@@ -1179,6 +1186,12 @@ footer#colophon .copyright {
 
 .hero-section {
 	padding: 1.6rem;
+}
+
+@media (min-width: 651px) and (min-height: 500px) {
+	.hero-section {
+		margin-left: 5rem;
+	}
 }
 
 @media (min-width: 880px) and (min-height: 500px) {
