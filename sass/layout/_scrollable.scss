@@ -8,11 +8,11 @@
   @include tablet {
     margin-top: 0;
     height: 100vh;
+    width: calc(100vw - #{$width-desktop-main-nav} + #{$border-width});
 
     .container-padding {
       display: flex;
       flex-wrap: wrap;
-      width: calc(100vw - #{$width-desktop-main-nav} + #{$border-width});
       padding: $spacing * 2 $spacing * 3 0 $spacing * 2;
 
       @include desktop {
