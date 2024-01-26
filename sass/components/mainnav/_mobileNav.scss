@@ -4,7 +4,7 @@
   margin-top: $spacing;
   height: calc(100vh - 7rem);
   overflow-y: auto;
-  padding-bottom: $spacing * 2;
+  padding-bottom: $spacing * 5;
 
   @include tablet {
     display: none;

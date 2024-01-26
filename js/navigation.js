@@ -140,7 +140,7 @@
 
   // Toggle focus each time a menu link with children receive a touch event.
   for (const link of linksWithChildren) {
-    link.addEventListener("touchstart", toggleFocus, false);
+    link.addEventListener("click", toggleFocus, false);
     link.addEventListener("keypress", toggleFocus, false);
     link.setAttribute("role", "button");
     link.setAttribute("aria-haspopup", "true");
@@ -176,7 +176,7 @@
       }
     }
 
-    if (event.type === "touchstart" || event.type === "keypress") {
+    if (event.type === "click" || event.type === "keypress") {
       const menuItem = this.parentNode;
       const innerLink = this;
       event.preventDefault();
