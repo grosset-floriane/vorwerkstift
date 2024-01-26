@@ -11,7 +11,7 @@
 
 <article id="post" <?php post_class(); ?>>
 	
-		<?php vorwerkstift_post_thumbnail(); ?>
+		<?php vorwerkstift_post_thumbnail(false); ?>
 		<div class="entry-inner-container">
 			<header class="entry-header">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

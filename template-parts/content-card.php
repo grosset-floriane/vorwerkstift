@@ -11,10 +11,10 @@
 
 
 <article id="upcoming-card" class="card">
-	<?php vorwerkstift_post_thumbnail(); ?>
+	<?php vorwerkstift_post_thumbnail(true); ?>
 	<div class="entry-inner-container">
 		<header class="entry-header">
-			<p class="card-category"><?php pll_e( 'Upcoming event' ); ?></p>
+			
 			<p class="period"><?php echo formatEventPeriod(); ?></p>
 			<?php the_title( '<h2 class="event-title">', '</h2>' ); ?>
 

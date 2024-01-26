@@ -6,7 +6,6 @@
   }
 
   @include desktop {
-    margin-left: $width-title-tablet-desktop + $spacing * 2;
     width: 100%;
     max-width: 120rem;
   }

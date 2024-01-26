@@ -29,7 +29,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php vorwerkstift_post_thumbnail(); ?>
+	<?php vorwerkstift_post_thumbnail(false); ?>
 
 	<div class="entry-content">
 		<?php
