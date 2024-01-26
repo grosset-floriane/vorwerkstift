@@ -86,6 +86,14 @@ address {
 	font-style: normal;
 }
 
+.screen-reader-only {
+	position: absolute;
+	width: 1px;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	white-space: nowrap;
+}
+
 body {
 	background-attachment: local;
 	background-position: center;
@@ -1528,6 +1536,41 @@ footer#colophon .copyright {
 
 .page article.card .entry-footer a {
 	color: #ffffff;
+}
+
+.wp-block-file a[target='_blank'] {
+	font-size: 1.6rem;
+}
+
+.wp-block-file a[target='_blank']::after {
+	content: url("/wp-content/themes/vorwerkstift/assets/images/external-icon.svg");
+	display: inline-block;
+	margin-left: 0.2em;
+	width: 1.7rem;
+	height: 1.3rem;
+	position: relative;
+	top: 0.2rem;
+	padding-left: 0.4rem;
+	color: #4b107a;
+}
+
+.wp-block-file a.wp-block-file__button {
+	background-color: #51d52d;
+	font-family: "lackregular", serif;
+	border-radius: 0.8rem;
+	font-size: 1.6rem;
+	transition: ease-in-out background-color 100ms;
+}
+
+.wp-block-file a.wp-block-file__button:hover {
+	background-color: #bbe8af;
+	transition: ease-in-out background-color 100ms;
+}
+
+.wp-block-file a.wp-block-file__button:focus-visible {
+	outline-offset: 0px;
+	outline: 4px solid #4b107a;
+	background-color: #51d52d;
 }
 
 .page article {

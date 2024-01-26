@@ -1,0 +1,18 @@
+.wp-block-file a.wp-block-file__button {
+  background-color: $color-green-main;
+  font-family: $font-headings;
+  border-radius: $spacing;
+  font-size: $font-size-base;
+  transition: $hover-transition;
+
+  &:hover {
+    background-color: $color-green-light;
+    transition: $hover-transition;
+  }
+
+  &:focus-visible {
+    outline-offset: 0px;
+    outline: 4px solid $color-purple-main;
+    background-color: $color-green-main;
+  }
+}
