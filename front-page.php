@@ -25,7 +25,7 @@ get_header();
 	<main class="hero-section" id="hero-section">
 		<h1 class="landing-title"><img src="/wp-content/themes/vorwerkstift/assets/images/title-landing.svg" alt="Vorwerk-Stift" /></h1>
 		<div class="flex-container">
-			<img src="/wp-content/themes/vorwerkstift/assets/images/img-landing-page.png" alt="" class="house-image"/>
+			<img src="/wp-content/themes/vorwerkstift/assets/images/img-landing-page.svg" alt="" class="house-image"/>
 			<div class="text-block">
 				<?php if( get_field('hero_text', $postID) ): ?>
 			<p><?php the_field('hero_text', $postID); ?></p>

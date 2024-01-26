@@ -11,10 +11,14 @@
 
     .container-padding {
       display: flex;
-      // flex-wrap: wrap;
-      flex-direction: column;
+      flex-wrap: wrap;
       width: calc(100vw - #{$width-desktop-main-nav} + #{$border-width});
       padding: $spacing * 2 $spacing * 3 0 $spacing * 2;
+
+      @include desktop {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
     }
   }
 }

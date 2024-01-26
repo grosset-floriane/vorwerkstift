@@ -41,16 +41,18 @@ get_header();
 						?>
 						<header>
 							<p class="section-title" id="section-title"><?php echo $sectionTitle; ?></p>
-							<nav class="sub-navigation">
-								<?php
-									wp_nav_menu(
-										array(
-											'theme_location' => $menuID,
-											'menu_id'        => $menuID,
-										)
-									);
-								?>
-							</nav>
+							<?php if($menuID !== "privacy-policy-menu") { ?>
+								<nav class="sub-navigation">
+									<?php
+										wp_nav_menu(
+											array(
+												'theme_location' => $menuID,
+												'menu_id'        => $menuID,
+											)
+										);
+									?>
+								</nav>
+							<?php } ?>
 							</header>
 						<?php
 					}

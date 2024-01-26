@@ -66,6 +66,22 @@ body {
     }
   }
 
+  &.privacy-policy {
+    background-image: url(./assets/images/privacy-policy-white.svg);
+    background-size: 100%;
+    background-position: 50% 15rem;
+
+    @include tablet {
+      background-position: 52% 2rem;
+      background-size: 78%;
+    }
+
+    @include desktop {
+      background-size: 70%;
+      background-position: 55% 2rem;
+    }
+  }
+
   .site {
     @include tablet {
       display: flex;
