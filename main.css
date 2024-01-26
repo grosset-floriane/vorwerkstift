@@ -180,21 +180,21 @@ body.contact-menu {
 	}
 }
 
-body.privacy-policy {
+body.privacy-policy, body.error404 {
 	background-image: url(./assets/images/privacy-policy-white.svg);
 	background-size: 100%;
 	background-position: 50% 15rem;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
-	body.privacy-policy {
+	body.privacy-policy, body.error404 {
 		background-position: 52% 2rem;
 		background-size: 78%;
 	}
 }
 
 @media (min-width: 880px) and (min-height: 500px) {
-	body.privacy-policy {
+	body.privacy-policy, body.error404 {
 		background-size: 70%;
 		background-position: 55% 2rem;
 	}
@@ -1566,48 +1566,56 @@ footer#colophon .copyright {
 	background-color: #51d52d;
 }
 
-.page article {
+.page article,
+.error404 article {
 	background-color: #ffffff;
 	margin-top: 14rem;
 	margin-bottom: 0;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
-	.page article {
+	.page article,
+	.error404 article {
 		margin-top: 7.6rem;
 	}
 }
 
-.page article .post-thumbnail {
+.page article .post-thumbnail,
+.error404 article .post-thumbnail {
 	height: fit-content;
 	line-height: 0;
 }
 
-.page article .post-thumbnail img {
+.page article .post-thumbnail img,
+.error404 article .post-thumbnail img {
 	aspect-ratio: 4/3;
 	object-fit: cover;
 	object-position: top center;
 }
 
 @media (min-width: 880px) and (min-height: 500px) {
-	.page article .post-thumbnail img {
+	.page article .post-thumbnail img,
+	.error404 article .post-thumbnail img {
 		aspect-ratio: 16/9;
 	}
 }
 
-.page article .entry-inner-container {
+.page article .entry-inner-container,
+.error404 article .entry-inner-container {
 	padding: 2.4rem;
 	padding-left: 1.6rem;
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
-	.page article .entry-inner-container {
+	.page article .entry-inner-container,
+	.error404 article .entry-inner-container {
 		padding: 4rem 8.8rem;
 		padding-left: 6.4rem;
 	}
 }
 
-.page article .entry-title {
+.page article .entry-title,
+.error404 article .entry-title {
 	margin-top: 0;
 	margin-bottom: 1.6rem;
 	font-weight: normal;
@@ -1616,31 +1624,38 @@ footer#colophon .copyright {
 }
 
 @media (min-width: 651px) and (min-height: 500px) {
-	.page article .entry-title {
+	.page article .entry-title,
+	.error404 article .entry-title {
 		font-size: 3.2rem;
 	}
 }
 
-.page article .entry-content {
+.page article .entry-content,
+.error404 article .entry-content {
 	margin: 1.6rem 0;
 }
 
-.page article p {
+.page article p,
+.error404 article p {
 	max-width: 54.4rem;
 }
 
-.page article a {
+.page article a,
+.error404 article a {
 	color: #6b22a6;
 	position: relative;
 	z-index: 2;
 }
 
-.page article a:hover, .page article a:focus-visible {
+.page article a:hover, .page article a:focus-visible,
+.error404 article a:hover,
+.error404 article a:focus-visible {
 	text-decoration: none;
 	background-color: #f2f3c1;
 }
 
-.page article a:focus-visible {
+.page article a:focus-visible,
+.error404 article a:focus-visible {
 	outline-width: 0.2rem;
 	outline-offset: 0;
 }
