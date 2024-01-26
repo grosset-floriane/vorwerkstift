@@ -11,7 +11,8 @@
 
     .container-padding {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
+      flex-direction: column;
       width: calc(100vw - #{$width-desktop-main-nav} + #{$border-width});
       padding: $spacing * 2 $spacing * 3 0 $spacing * 2;
     }

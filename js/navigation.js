@@ -116,7 +116,9 @@
   if (sectionTitle !== null) {
     const allLinks = mainNavigation.getElementsByTagName("a");
     for (const link of allLinks) {
-      if (link.innerHTML === sectionTitle.innerHTML) {
+      if (
+        link.innerHTML.toLowerCase() === sectionTitle.innerHTML.toLowerCase()
+      ) {
         link.classList.add("active-child");
         break;
       }

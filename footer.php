@@ -23,7 +23,7 @@
 			);
 			?>
 		<address>
-			Vorwerk-Stift | Galerie 21<br />
+			<span translate="no" lang="de">Vorwerk-Stift | Galerie 21</span><br />
 			Vorwerkstrasse 21<br />
 			20357 Hamburg<br />
 			Germany
