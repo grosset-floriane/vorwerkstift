@@ -5,7 +5,7 @@
  * - add indication of opening tabs in new link
  */
 const OPEN_TEXT = {
-  de: "öffnet sich in einem neuen Tab",
+  de: "öffnet in einem neuen Tab",
   en: "opens in a new tab"
 };
 

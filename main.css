@@ -1591,6 +1591,7 @@ footer#colophon .copyright {
 	aspect-ratio: 4/3;
 	object-fit: cover;
 	object-position: top center;
+	width: 100%;
 }
 
 @media (min-width: 880px) and (min-height: 500px) {

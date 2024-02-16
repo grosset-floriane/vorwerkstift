@@ -14,6 +14,7 @@
       aspect-ratio: 4/3;
       object-fit: cover;
       object-position: top center;
+      width: 100%;
 
       @include desktop {
         aspect-ratio: 16/9;
