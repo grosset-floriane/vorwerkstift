@@ -456,7 +456,7 @@ footer#colophon #footer-menu li a {
 	font-family: "lackregular", serif;
 }
 
-footer#colophon #footer-menu li a:hover, footer#colophon #footer-menu li a:focus-visible {
+footer#colophon #footer-menu li a:hover, footer#colophon #footer-menu li a:focus-visible, footer#colophon #footer-menu li a[aria-current='page']:hover, footer#colophon #footer-menu li a[aria-current='page']:focus-visible {
 	color: #bbe8af;
 	text-decoration: none;
 }
@@ -464,6 +464,16 @@ footer#colophon #footer-menu li a:hover, footer#colophon #footer-menu li a:focus
 footer#colophon #footer-menu li a:focus-visible {
 	outline-width: 0.2rem;
 	outline-offset: 0.1rem;
+}
+
+footer#colophon #footer-menu li a[aria-current='page'] {
+	background-color: #f2f3c1;
+	color: #4b107a;
+	text-decoration: none;
+}
+
+footer#colophon #footer-menu li a[aria-current='page']:hover, footer#colophon #footer-menu li a[aria-current='page']:focus-visible {
+	background-color: #6b22a6;
 }
 
 footer#colophon #footer-menu li::after {

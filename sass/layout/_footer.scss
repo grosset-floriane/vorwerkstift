@@ -81,7 +81,9 @@ footer#colophon {
         font-family: $font-headings;
 
         &:hover,
-        &:focus-visible {
+        &:focus-visible,
+        &[aria-current='page']:hover,
+        &[aria-current='page']:focus-visible {
           color: $color-green-light;
           text-decoration: none;
         }
@@ -89,6 +91,17 @@ footer#colophon {
         &:focus-visible {
           outline-width: 0.2rem;
           outline-offset: 0.1rem;
+        }
+
+        &[aria-current='page'] {
+          background-color: $color-yellow-light;
+          color: $color-purple-main;
+          text-decoration: none;
+
+          &:hover,
+          &:focus-visible {
+            background-color: $color-purple-light;
+          }
         }
       }
 
