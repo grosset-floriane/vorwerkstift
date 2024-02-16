@@ -1,4 +1,5 @@
-.page article {
+.page article,
+.error404 article {
   background-color: $color-white-light;
   margin-top: 14rem;
   margin-bottom: 0;
@@ -13,6 +14,7 @@
       aspect-ratio: 4/3;
       object-fit: cover;
       object-position: top center;
+      width: 100%;
 
       @include desktop {
         aspect-ratio: 16/9;

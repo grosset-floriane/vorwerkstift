@@ -7,54 +7,61 @@
  * @package vorwerkstift
  */
 
+if ( pll_current_language() === "en" ) {
+	$args = array("title" => "Page not found (Error 404)", 'post_type' => 'page') ;
+} else {
+	$args = array("title" => "Seite nicht gefunden (Fehler 404)", 'post_type' => 'page');
+}
+$the_query = new WP_Query( $args );
 get_header();
 ?>
-
+<div class="scrollable">
+	<div class="container-padding">
+	<?php require('site-header.php'); ?>
+	<div id="main-container">
 	<main id="primary" class="site-main">
+	<?php 
+	while ( $the_query->have_posts() ) :
+		$the_query->the_post();
+		
+		/* Check which section the page belongs to display the  
+		** corresponding title in the current language and 
+		** subnavigation.
+		*/
+		// get all the section categories
+		$currentSection = vorwerkstift_get_section_category(null);
+				
+		if(!empty($currentSection)) {
+			$menuID = $currentSection["menuID"];
+			$sectionTitle = $currentSection["sectionTitle"];
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'vorwerkstift' ); ?></h1>
-			</header><!-- .page-header -->
+			if($menuID) {
+				?>
+				<header>
+					<p class="section-title" id="section-title"><?php echo $sectionTitle; ?></p>
+				</header>
+				<?php
+			}
+		}
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'vorwerkstift' ); ?></p>
+		// get all the section categories
+		$currentSection = vorwerkstift_get_section_category(null);
 
-					<?php
-					get_search_form();
+		get_template_part( 'template-parts/content', 'page' );
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'vorwerkstift' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$vorwerkstift_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'vorwerkstift' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$vorwerkstift_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
+	endwhile; // End of the loop.
+	?>
+		
 
 	</main><!-- #main -->
+	<aside id="sidebar-desktop" class="widget-area">
+			<?php dynamic_sidebar( 'sidebar-desktop' ); ?>
+		</aside>
+	</div><!-- #main-container -->
+	</div><!-- .container-padding -->
+	
 
 <?php
 get_footer();
+?>
+</div> <!-- .scrollable -->
