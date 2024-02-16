@@ -219,11 +219,11 @@ body.privacy-policy {
 	.scrollable {
 		margin-top: 0;
 		height: 100vh;
+		width: calc(100vw - 4.9rem + 0.4rem);
 	}
 	.scrollable .container-padding {
 		display: flex;
 		flex-wrap: wrap;
-		width: calc(100vw - 4.9rem + 0.4rem);
 		padding: 1.6rem 2.4rem 0 1.6rem;
 	}
 }
@@ -371,19 +371,12 @@ footer#colophon {
 
 @media (min-width: 651px) and (min-height: 500px) {
 	footer#colophon {
-		width: calc(100% - 3rem);
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		max-height: 50rem;
 		margin-top: 6.4rem;
-	}
-}
-
-@media (min-width: 880px) and (min-height: 500px) {
-	footer#colophon {
-		width: calc(100% - 3.5rem);
 	}
 }
 
