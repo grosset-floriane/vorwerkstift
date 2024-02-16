@@ -1,0 +1,14 @@
+.wp-block-file a[target='_blank'] {
+  font-size: $font-size-base;
+  &::after {
+    content: url('/wp-content/themes/vorwerkstift/assets/images/external-icon.svg');
+    display: inline-block;
+    margin-left: 0.2em;
+    width: $spacing / 2 + 1.3rem;
+    height: 1.3rem;
+    position: relative;
+    top: 0.2rem;
+    padding-left: $spacing / 2;
+    color: $color-purple-main;
+  }
+}
