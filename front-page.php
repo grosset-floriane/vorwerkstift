@@ -30,7 +30,7 @@ get_header();
 				<?php if( get_field('hero_text', $postID) ): ?>
 			<p><?php the_field('hero_text', $postID); ?></p>
 			<?php else: ?>
-			<p><?php pll_e( 'an everchanging community fostering independent artistic creation since 1990.' ); ?></p>
+			<p><?php pll_e( 'an everchanging community fostering independent artistic creation since 1980.' ); ?></p>
 		<?php endif; ?>
 		<button id="scroll-button" aria-label="scroll down to main content" class="hero-arrow"></button>
 			</div>
