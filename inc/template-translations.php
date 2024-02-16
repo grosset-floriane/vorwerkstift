@@ -22,4 +22,4 @@ pll_register_string( 'vorwerkstift-theme-about', 'about' );
 /**
  * Front page
  */
-pll_register_string( 'vorwerkstift-theme-slogan', 'an everchanging community fostering independent artistic creation since 1990.' );
+pll_register_string( 'vorwerkstift-theme-slogan', 'an everchanging community fostering independent artistic creation since 1980.' );
