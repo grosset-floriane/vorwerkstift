@@ -9,10 +9,11 @@
     font-size: 1.8rem;
     font-family: $font-headings;
     background-color: $color-white-light;
-    width: fit-content;
     max-width: $width-desktop-main-nav;
+    width: $width-desktop-main-nav;
+    min-width: $width-desktop-main-nav;
     height: 100%;
-  
+
     .menu {
       justify-content: stretch;
       flex-direction: column;
@@ -20,14 +21,14 @@
       max-height: 100vh;
       flex-wrap: wrap;
       display: flex;
-  
+
       > li {
         flex-grow: 1;
         display: flex;
         max-height: 14rem;
       }
     }
-  
+
     a {
       padding: 0 $spacing;
       writing-mode: vertical-rl;
@@ -41,8 +42,9 @@
         background-color: $color-yellow-light;
         transition: $hover-transition;
       }
-  
-      &[aria-current='page'], &.active-child {
+
+      &[aria-current='page'],
+      &.active-child {
         background-color: $color-green-main;
         color: $color-purple-main;
 
@@ -52,7 +54,5 @@
         }
       }
     }
-    
   }
-
 }

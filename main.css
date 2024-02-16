@@ -709,8 +709,9 @@ footer#colophon .copyright {
 		font-size: 1.8rem;
 		font-family: "lackregular", serif;
 		background-color: #ffffff;
-		width: fit-content;
 		max-width: 4.9rem;
+		width: 4.9rem;
+		min-width: 4.9rem;
 		height: 100%;
 	}
 	.main-navigation .menu {
