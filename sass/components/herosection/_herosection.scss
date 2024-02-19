@@ -5,8 +5,8 @@
     margin-left: $width-title-tablet-desktop;
   }
 
-  @include desktop {
-    width: 100%;
+  @include mediumdesktop {
+    width: calc(100% - 2px);
     max-width: 120rem;
   }
 
@@ -32,7 +32,7 @@
     flex-direction: column;
     align-items: center;
 
-    @include desktop {
+    @include mediumdesktop {
       flex-direction: row;
       gap: $spacing * 3;
       position: relative;
@@ -40,7 +40,7 @@
 
     &::before,
     &::after {
-      @include desktop {
+      @include mediumdesktop {
         content: ' ';
         display: block;
         width: calc(100% - #{$spacing * 2});
@@ -56,7 +56,7 @@
     }
 
     &::before {
-      @include desktop {
+      @include mediumdesktop {
         top: $spacing * 2;
         left: $spacing * 2;
       }
@@ -66,10 +66,13 @@
       width: calc(100% - 2 * #{$spacing * 2});
 
       @include desktop {
-        max-width: 50%;
         margin-top: -$spacing * 9;
         position: relative;
         z-index: 1;
+      }
+
+      @include mediumdesktop {
+        max-width: 50%;
       }
     }
 
@@ -78,7 +81,7 @@
       flex-direction: column;
       align-items: center;
 
-      @include desktop {
+      @include mediumdesktop {
         align-items: flex-start;
         // border-left: 0.4rem solid $color-white-light;
         // padding: $spacing * 2 $spacing * 3;
@@ -103,7 +106,7 @@
         font-size: $font-size-medium;
       }
 
-      @include desktop {
+      @include mediumdesktop {
         border-top: none;
         border-left: 0.4rem solid $color-white-light;
         padding: $spacing * 2 $spacing * 3;
@@ -126,7 +129,7 @@
       margin-bottom: $spacing;
       z-index: 1;
 
-      @include desktop {
+      @include mediumdesktop {
         background-position: left top;
         height: 5rem;
         width: 5rem;

@@ -7,8 +7,8 @@
   }
 
   @include desktop {
-    width: 100%;
     display: flex;
+    gap: $spacing * 2;
     margin-left: $width-title-tablet-desktop + $spacing * 2;
     #primary {
       width: 75%;

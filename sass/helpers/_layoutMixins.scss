@@ -16,6 +16,12 @@
   }
 }
 
+@mixin mediumdesktop {
+  @media (min-width: 945px) and (min-height: 500px) {
+    @content;
+  }
+}
+
 @mixin largedesktop {
   @media (min-width: 1400px) {
     @content;
